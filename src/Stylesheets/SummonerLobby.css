@@ -1,0 +1,40 @@
+.lobby{
+    padding-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    height: 90%;
+}
+
+.flexbox-container{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexbox-item{
+    width: 15%;
+    border: 3px solid #bf8600;
+    border-radius: 5%;
+    height: 90%;
+    background-color: #1a19197c;
+}
+
+.loading-gif{
+    margin-top: 20%;
+    width: 10%;
+    aspect-ratio: 1/1;
+}
+
+.blue-team{
+    background-color: #020e1e7c;
+}
+
+.red-team{
+    background-color: #210d0d7c;
+}
+
+.versusTag{
+    color: #bf8600;
+}

@@ -1,0 +1,6 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  font-family: 'Kanit', sans-serif;
+  font-size: calc(10px + 2vmin);
+}

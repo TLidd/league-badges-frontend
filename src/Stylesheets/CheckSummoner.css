@@ -1,0 +1,7 @@
+.noSummonerExists{
+    position: absolute;
+    transform: translate(-50%);
+    top: 200%;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.914);
+}

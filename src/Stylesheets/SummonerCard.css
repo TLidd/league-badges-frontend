@@ -1,0 +1,120 @@
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.name{
+    font-size: 80%;
+    font-weight: bold;
+    transition-duration: 0.25s;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    word-break: break-all;
+}
+
+.name:hover{
+    font-size: 85%;
+    color: #bf8600;
+}
+
+.namePlate{
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    padding: 2.5%;
+    position: relative;
+    border-bottom: 3px solid #bf8600;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.highlightSummoner{
+    color: #bf8600;
+}
+
+.lobbyParticipant{
+    color: rgb(255, 255, 255);
+}
+
+a:link {
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+
+.played-role{
+    position: relative;
+    margin-top: 5%;
+    width: 60%;
+    box-sizing: border-box;
+    height: 20%;
+    border: 2px solid #553b007c;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.roleIcon{
+    aspect-ratio: 1/1;
+    height: 60%;
+}
+
+.role-text{
+    overflow: hidden;
+    padding-top: 2%;
+    height: 33%;
+    font-size: 15px;
+    color: #765300;
+    border-bottom: 1px solid #553b007c;
+}
+
+.grid-container{
+    height: 50%;
+    padding-top: 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.badges{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.badge{
+    margin: 10%;
+    width: 65%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20%;
+    border: 2px solid #bf8600;
+}
+
+.badge img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.Good{
+    background-color: rgb(255, 255, 107);
+}
+
+.Great{
+    background-color: #8ce900;
+}
+
+.Excellent{
+    background-color: green;
+}
