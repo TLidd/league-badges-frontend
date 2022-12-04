@@ -9,7 +9,7 @@ import NavBar from "./NavBar";
 import Loading from "./Loading";
 
 const fetchPlayerData = async (name) => {
-    const res = await fetch(`${process.env.ROUTE}/summonerData/${name}`);
+    const res = await fetch(`https://league-badges-backend.onrender.com/summonerData/${name}`);
     return res.json();
 }
 
@@ -21,7 +21,7 @@ const SummonerLobby = () => {
     let [loadPercent, setLoadPercent] = useState(0);
     
     //get the lobby list of names to process the queries of each champion to cache.
-    let lobby = useGetFetch(`${process.env.ROUTE}/getLobbyList/${name}`);
+    let lobby = useGetFetch(`https://league-badges-backend.onrender.com/getLobbyList/${name}`);
 
     let gameParticipants = null;
     if(lobby?.data){

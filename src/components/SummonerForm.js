@@ -11,7 +11,7 @@ const SummonerForm = () => {
     //the form input name the user types in (-1 is just a placeholder for a name for the first hook)
     const [formName, setFormName] = useState("-1");
     console.log(process.env.REACT_APP_ROUTE);
-    const {data, isPending, error} = useGetFetch(`${process.env.REACT_APP_ROUTE}/summonerGame/${formName}`);
+    const {data, isPending, error} = useGetFetch(`https://league-badges-backend.onrender.com/summonerGame/${formName}`);
 
     const formSubmit = (e) => {
         e.preventDefault();
