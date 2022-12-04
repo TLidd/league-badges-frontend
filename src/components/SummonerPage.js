@@ -7,7 +7,7 @@ import ChampionChart from "./ChampionChart"
 import NavBar from "./NavBar"
 
 const fetchPlayerData = async (name) => {
-    const res = await fetch(`https://league-badges-backend.onrender.com/summonerData/${name}`);
+    const res = await fetch(`${ROUTE}/summonerData/${name}`);
     return res.json();
 }
 
