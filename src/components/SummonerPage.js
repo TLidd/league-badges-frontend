@@ -4,7 +4,7 @@ import "../Stylesheets/SummonerPage.css"
 import "../Stylesheets/Badge.css"
 import { badgeDescriptions } from "./badgeDescriptions"
 import ChampionChart from "./ChampionChart"
-import NavBar from "./NavBar"
+import NavIcon from "./NavIcon"
 
 const fetchPlayerData = async (name) => {
     const res = await fetch(`https://league-badges-backend.onrender.com/summonerData/${name}`);
@@ -29,7 +29,7 @@ const SummonerPage = () => {
 
   return (
     <div>
-      <NavBar/>
+      <NavIcon/>
       { 
         data &&
         <div>
