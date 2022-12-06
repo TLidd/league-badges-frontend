@@ -1,37 +1,3 @@
-.NavContainer{
-    width: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.NavContainer .link{
-    display: inline-block;
-    width: 100%;
-
-    color: #bf8600;
-    text-decoration: none;
-    font-size: 95%;
-    font-weight: bold;
-
-    background-color: #0a2747;
-    border-left: 2px solid #bf8600;
-    border-right: 2px solid #bf8600;
-    border-bottom: 2px solid #bf8600;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    transition-duration: 0.5s;
-
-    padding-bottom: 5px;
-}
-
-.NavContainer .link:hover{
-    font-size: 100%;
-    background-color: #175da8;
-}
-
 .icon{
     position: absolute;
     border-radius: 50%;
@@ -41,7 +7,7 @@
     aspect-ratio: 1/1;
     color: #134f8f;
     border: 1px solid #134f8f;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 .icon .link{
@@ -70,7 +36,7 @@
     transform: translate(-50%);
     top: 100%;
     color: #071b30;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     visibility: hidden;
     pointer-events: none;
 }

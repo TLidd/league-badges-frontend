@@ -13,8 +13,9 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="" element={<SummonerForm />} />
-          <Route exact path={`/:name`} element={<SummonerPage />} />
-          <Route exact path={`/:name/ActiveGame/*`} element={<SummonerLobby />} />
+          <Route exact path={`/Help`} />
+          <Route exact path={`/account/:name`} element={<SummonerPage />} />
+          <Route exact path={`/account/:name/ActiveGame/*`} element={<SummonerLobby />} />
           <Route exact path={'//riot.txt'} onEnter={reload} />
           <Route element={<SummonerForm />}/>
         </Routes>

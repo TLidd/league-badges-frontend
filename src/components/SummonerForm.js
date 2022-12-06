@@ -3,6 +3,7 @@ import {Navigate} from "react-router-dom"
 import "../Stylesheets/SummonerForm.css"
 import CheckSummoner from "./CheckSummoner";
 import useGetFetch from "./useGetFetch";
+import NavIcon from "./NavIcon"
 
 const SummonerForm = () => {
     //useRef allows for a ref object of the form value below
@@ -24,6 +25,7 @@ const SummonerForm = () => {
     
     return (
         <>
+            <NavIcon icon={'?'} description={"Help"} path={'./Help'} />
             <div className="form-background">
                 <img src={require("../assets/mordekaiser.gif")} alt=""/>
             </div>
@@ -34,7 +36,7 @@ const SummonerForm = () => {
                     <input className="button" type="submit" value="Find Summoner"></input>
                 </form>
                 {isPending && formName.length >= 3 && <img className="loadingGif" src={require("../assets/loading.gif")} alt="loading..."/>}
-                {data && data?.gameId && !isPending && <Navigate to={`./${formName}/ActiveGame`} />}
+                {data && data?.gameId && !isPending && <Navigate to={`./account/${formName}/ActiveGame`} />}
                 {/* if summoner doesn't exist or not in game CheckSummoner */}
                 {error && formName.length >= 3 && !isPending && <CheckSummoner formName={formName} data={error}/>}
             </div>

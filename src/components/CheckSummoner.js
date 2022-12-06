@@ -32,7 +32,7 @@ const NoSummoner = ({formName, data}) => {
                 </div>
             }
 
-            {summonerExists && data?.summonerName && <Navigate to={`/${data?.summonerName}`} />}   
+            {summonerExists && data?.summonerName && <Navigate to={`./account/${data?.summonerName}`} />}   
         </div>
     )
 }
