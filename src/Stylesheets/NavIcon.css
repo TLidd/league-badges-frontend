@@ -3,7 +3,7 @@
     border-radius: 50%;
     left: 1%;
     top: 1%;
-    width: 3%;
+    width: 2.5%;
     aspect-ratio: 1/1;
     color: #134f8f;
     border: 1px solid #134f8f;
@@ -13,7 +13,7 @@
 .icon .link{
     position: absolute;
     font-size: 120%;
-    top: 55%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-decoration: none;
