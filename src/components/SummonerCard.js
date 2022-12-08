@@ -20,7 +20,7 @@ const SummonerCard = ({sumName, sumRole, sumBadges, activeGame}) => {
     <div className="card">
       <div className="namePlate">
         {activeGame ? 
-          <Link to={`/${summonerName}`} className={`name ${highlight}`} style={{textDecoration: 'none'}}>
+          <Link to={`../account/${summonerName}`} className={`name ${highlight}`} style={{textDecoration: 'none'}}>
             {summonerName} 
           </Link>
           :
