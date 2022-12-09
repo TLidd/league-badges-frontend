@@ -1,0 +1,41 @@
+h1{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    color: #bf8600;
+    text-shadow: 0 0 2px black, 0 0 2px black;
+}
+
+.help-container{
+    display: flex;
+    height: 100%;
+}
+
+.help-item{
+    border: 1px solid #bf8600;
+    background-color: #020e1e25;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 30%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.help-item p{
+    text-shadow: 0 0 3px black, 0 0 3px black;
+    width: 90%;
+    color: #bf8600;
+    font-size: 25px;
+}
+
+.placeholder{
+    margin: 0px auto;
+    width: 80%;
+    height: 50%;
+    border: 1px solid #bf8600;
+    border-radius: 50px;
+}
