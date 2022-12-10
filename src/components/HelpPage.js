@@ -9,15 +9,15 @@ const HelpPage = () => {
         <div className="help-container">
             <div className="help-item">
                 <p>Enter in a summoner name to search <br/> to receive player info.</p>
-                <img className="help-img" src={require("../assets/help1.gif")}></img>
+                <img className="help-img" src={require("../assets/help1.gif")} alt=""></img>
             </div>
             <div className="help-item">
-                <img className="help-img" src={require("../assets/help2.gif")}></img>
+                <img className="help-img" src={require("../assets/help2.gif")} alt=""></img>
                 <p>See current game lobby and what each player excels at by reviewing their badges.</p>
             </div>
             <div className="help-item">
-                <p>Review a player individually to get <br/> more information on them.</p>
-                <img className="help-img" src={require("../assets/help3.gif")}></img>
+                <p>Review a player individually to get more <br/> information on their performances.</p>
+                <img className="help-img" src={require("../assets/help3.gif")} alt=""></img>
             </div>
         </div>
     </>

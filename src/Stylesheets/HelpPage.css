@@ -1,19 +1,20 @@
 h1{
     position: absolute;
     left: 50%;
-    top: 5%;
+    top: 10%;
     transform: translate(-50%);
     color: #bf8600;
-    text-shadow: 0 0 2px black, 0 0 2px black;
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }
 
 .help-container{
     display: flex;
     height: 100%;
+    padding-top: 5%;
 }
 
 .help-item{
-    border: 2px solid #020e1e69;
+    border: 5px solid #020e1e69;
     background-color: #020e1e25;
     border-radius: 50px;
     display: flex;
@@ -35,6 +36,6 @@ h1{
 .help-img{
     width: 80%;
     height: 50%;
-    border: 1px solid #bf8600;
+    border: 3px solid #020e1e69;
     border-radius: 50px;
 }
