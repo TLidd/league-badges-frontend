@@ -37,10 +37,12 @@
 
 .highlightSummoner{
     color: #bf8600;
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }
 
 .lobbyParticipant{
     color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }
 
 a:link {
@@ -57,6 +59,7 @@ a:link {
     border: 2px solid #553b007c;
     border-radius: 15px;
     overflow: hidden;
+    text-shadow: 0 0 2px black, 0 0 2px black;
 }
 
 .roleIcon{
