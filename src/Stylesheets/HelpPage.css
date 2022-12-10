@@ -13,7 +13,7 @@ h1{
 }
 
 .help-item{
-    border: 1px solid #bf8600;
+    border: 2px solid #020e1e69;
     background-color: #020e1e25;
     border-radius: 50px;
     display: flex;
@@ -32,8 +32,7 @@ h1{
     font-size: 25px;
 }
 
-.placeholder{
-    margin: 0px auto;
+.help-img{
     width: 80%;
     height: 50%;
     border: 1px solid #bf8600;
