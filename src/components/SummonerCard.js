@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import "../Stylesheets/SummonerCard.css"
 import { badgeDescriptions, playerRoles } from "./badgeDescriptions";
 
-const SummonerCard = ({sumName, sumRole, sumBadges, activeGame}) => {
+const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
   let {name} = useParams();
 
   let summonerName = sumName;
@@ -26,7 +26,7 @@ const SummonerCard = ({sumName, sumRole, sumBadges, activeGame}) => {
           :
           summonerName
         }
-        <img className="nameplate-img" src={require("../assets/tiles/Veigar_0.jpg")} alt=""></img>
+        <img className="nameplate-img" src={require(`../assets/tiles/${sumChamp}_0.jpg`)} alt=""></img>
       </div>
       <div className="played-role">
         <div className="role-text">Most Played Role</div>

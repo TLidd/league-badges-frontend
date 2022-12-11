@@ -8,9 +8,11 @@ import ActiveGame from "./ActiveGame";
 import NavIcon from "./NavIcon";
 import Loading from "./Loading";
 
-const fetchPlayerData = async (name) => {
+const fetchPlayerData = async (name, currentChamp) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
-    return res.json();
+    let data = await res.json();
+    data.currentChamp = currentChamp;
+    return data;
 }
 
 const SummonerLobby = () => {
@@ -24,15 +26,20 @@ const SummonerLobby = () => {
     let lobby = useGetFetch(`${process.env.REACT_APP_ROUTE_PATH}/getLobbyList/${name}`);
 
     let gameParticipants = null;
+    let playerChamp = {};
     if(lobby?.data){
-        gameParticipants = Object.values(lobby.data);
+        gameParticipants = [];
+        for(let i = 0; i < lobby.data.length; i++){
+            gameParticipants.push(lobby.data[i][0]);
+            playerChamp[lobby.data[i][0]] = lobby.data[i][1];
+        }
     }
 
     const lobbyQuery = useQueries({
         queries: lobby?.data ? gameParticipants.map(participant => {
             return {
                 queryKey: ['summonerBadgeData', participant.toLowerCase()],
-                queryFn: () => fetchPlayerData(participant),
+                queryFn: () => fetchPlayerData(participant, playerChamp[participant]),
                 enabled: !!lobby,
             }
         }) : []
@@ -77,7 +84,7 @@ const SummonerLobby = () => {
                     {
                     team1.map(player => {
                         return  <div className="flexbox-item blue-team" key={player.data.SummonerName}>
-                                    <SummonerCard sumName= {player.data.SummonerName} sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true}/>
+                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true}/>
                                 </div>
                     })
                     }
@@ -87,7 +94,7 @@ const SummonerLobby = () => {
                     {
                     team2.map(player => {
                         return  <div className="flexbox-item red-team" key={player.data.SummonerName}>
-                                    <SummonerCard sumName= {player.data.SummonerName} sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true}/>
+                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true}/>
                                 </div>
                     })
                     }
