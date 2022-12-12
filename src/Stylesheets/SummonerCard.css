@@ -110,7 +110,7 @@ a:link {
     width: 65%;
     aspect-ratio: 1 / 1;
     border-radius: 20%;
-    border: 2px solid #bf8600;
+    border: 3px solid #bf8600;
 }
 
 .badge img{
@@ -121,13 +121,13 @@ a:link {
 }
 
 .Good{
-    background-color: rgb(255, 255, 107);
+    background-color: rgba(89, 255, 0, 0.084);
 }
 
 .Great{
-    background-color: #8ce900;
+    background-color: #50e4006a;
 }
 
 .Excellent{
-    background-color: green;
+    background-color: rgb(0, 255, 0);
 }
