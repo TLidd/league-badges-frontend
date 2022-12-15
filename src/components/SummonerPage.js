@@ -22,8 +22,6 @@ const SummonerPage = () => {
       () => fetchPlayerData(name),
   );
 
-  let badgeLevel = ["Good", "Great", "Excellent"];
-
   if(isLoading){
     return <img className="loading-gif" src={require("../assets/loading2.gif")} alt="loading..." />
   }
@@ -75,7 +73,7 @@ const SummonerPage = () => {
       }
       <div className="player-container">
         <div className="player-piece">
-          <BadgeBox />
+          <BadgeBox badges={data?.badges}/>
         </div>
         <div className="player-piece">
           {
