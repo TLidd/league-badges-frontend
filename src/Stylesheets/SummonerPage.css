@@ -8,6 +8,7 @@
     text-decoration-skip-ink: none;
     text-underline-offset: 10px;
     text-decoration-thickness: 2px;
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }
 
 .badgeBar{
@@ -44,4 +45,23 @@
     background-color: #bf8600;
     color: black;
     cursor: pointer;
+}
+
+.player-container{
+    border: 1px solid black;
+    width: 95%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.player-piece{
+    border: 1px solid #bf8600;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: auto;
+    height: 90%;
+    width: 90%;
 }

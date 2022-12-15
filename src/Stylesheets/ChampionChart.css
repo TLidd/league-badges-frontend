@@ -1,6 +1,8 @@
 .championChart{
-    width: 25%;
+    width: 500px;
+    height: 500px;
     margin: auto;
+    margin-top: 10%;
 }
 
 .championLegend{
@@ -13,7 +15,7 @@
     margin-right: auto;
     right: 0;
     left: 0;
-    width: 25%;
+    width: 80%;
     top: 80%;
 }
 

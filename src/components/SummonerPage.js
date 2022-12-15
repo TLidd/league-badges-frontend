@@ -28,50 +28,61 @@ const SummonerPage = () => {
   }
 
   return (
-    <div>
+    <div style={{"height" : "100%"}}>
       <NavIcon/>
       { 
-        data &&
-        <div>
+        // data &&
+        // <div>
           <div className="player-name">
             {data?.SummonerName}
           </div>
-          {
-            <div>
-              {
-                <div className="badgeBar">
-                  {/* create a bar with all the badges the user has */}
-                  {
-                    Object.keys(data?.badges).length > 0  ?
-                    Object.keys(data?.badges).map((badge) => {
-                      return  <div title={`${badgeDescriptions[badge]} ${badgeLevel[data.badges[badge]]}`} className={`${badgeLevel[data.badges[badge]]} badgeBarBadge`} key={`${badge}`}>
-                                <img src={require(`../assets/badgeIcons/${badge}.png`)} alt=""/>
-                              </div>
-                    })
-                    :
-                    <div className="emptyBadges"/>
-                  }
-                </div>
-              }
-            </div>
-          }
-          <div>
-            <button className="activeGameButton" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
-          </div>
+        //   {
+        //     <div>
+        //       {
+        //         <div className="badgeBar">
+        //           {/* create a bar with all the badges the user has */}
+        //           {
+        //             Object.keys(data?.badges).length > 0  ?
+        //             Object.keys(data?.badges).map((badge) => {
+        //               return  <div title={`${badgeDescriptions[badge]} ${badgeLevel[data.badges[badge]]}`} className={`${badgeLevel[data.badges[badge]]} badgeBarBadge`} key={`${badge}`}>
+        //                         <img src={require(`../assets/badgeIcons/${badge}.png`)} alt=""/>
+        //                       </div>
+        //             })
+        //             :
+        //             <div className="emptyBadges"/>
+        //           }
+        //         </div>
+        //       }
+        //     </div>
+        //   }
+        //   <div>
+        //     <button className="activeGameButton" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
+        //   </div>
+        //   {
+        //     data && <ChampionChart data={data}/>
+        //   }
+        // </div>
+      }
+      {
+        // !data && 
+        // <div className="noSummoner">
+        //   <div>
+        //     {`${name} does not exist.`}
+        //   </div>
+        //   <button className="button" onClick={() => navigate(`/`)}>New Search</button>
+        // </div>
+      }
+      <div className="player-container">
+        <div className="player-piece">
           {
             data && <ChampionChart data={data}/>
           }
         </div>
-      }
-      {
-        !data && 
-        <div className="noSummoner">
-          <div>
-            {`${name} does not exist.`}
-          </div>
-          <button className="button" onClick={() => navigate(`/`)}>New Search</button>
+        <div className="player-piece">
         </div>
-      }
+        <div className="player-piece">
+        </div>
+      </div>
     </div>
   )
 }
