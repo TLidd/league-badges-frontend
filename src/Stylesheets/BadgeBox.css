@@ -22,11 +22,10 @@
 .box-scroll-item{
     margin-right: auto;
     margin-left: auto;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 70%;
     aspect-ratio: 1/1;
-    border: 1px solid red;
-    border-radius: 15px;
 }
 
 ::-webkit-scrollbar {

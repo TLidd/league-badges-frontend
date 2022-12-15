@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import {useQuery} from "@tanstack/react-query"
 import "../Stylesheets/SummonerPage.css"
-import "../Stylesheets/Badge.css"
+import "../Stylesheets/Badges.css"
 import { badgeDescriptions } from "./badgeDescriptions"
 import ChampionChart from "./ChampionChart"
 import NavIcon from "./NavIcon"
@@ -75,12 +75,12 @@ const SummonerPage = () => {
       }
       <div className="player-container">
         <div className="player-piece">
+          <BadgeBox />
+        </div>
+        <div className="player-piece">
           {
             data && <ChampionChart data={data}/>
           }
-        </div>
-        <div className="player-piece">
-          <BadgeBox />
         </div>
         <div className="player-piece">
         </div>

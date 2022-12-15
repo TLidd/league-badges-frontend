@@ -1,21 +1,45 @@
-.badgeBarBadge{
-    width: 4%;
-    aspect-ratio: 1 / 1;
-    border-radius: 20%;
-    background-color: #25426e5a;
-    border: 2px solid #bf8600;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
-.badgeBarBadge img{
-    height: 100%;
+.badge-container{
     width: 100%;
-    object-fit: contain;
-    display: block;
+    height: 100%;
+
+    border: 1px #bf8600;
+    border-style: solid;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+
 }
 
-.emptyBadges{
-    width: 4%;
-    aspect-ratio: 1 / 1;
+.badge-unearned{
+    filter: grayscale(100%);
+    opacity: 25%;
+}
+
+.badge-container img{
+    width: 75%;
+}
+
+.badge-container .badge-name{
+    font-size: 50%;
+    color: #bf8600;
+    text-shadow: 0 0 2px black, 0 0 2px black;
+}
+
+.Good1{
+    background-color: rgba(34, 102, 84, 0.512);
+}
+
+.Great1{
+    background-color: #0f8137;
+}
+
+.Excellent1{
+    background-color: rgb(19, 97, 19);
 }
