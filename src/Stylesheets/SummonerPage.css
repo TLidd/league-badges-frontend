@@ -48,13 +48,14 @@
 }
 
 .player-container{
-    border: 1px solid black;
     width: 95%;
     height: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
 }
 
 .player-piece{
@@ -64,4 +65,5 @@
     margin: auto;
     height: 90%;
     width: 90%;
+    overflow: hidden;
 }

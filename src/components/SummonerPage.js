@@ -5,6 +5,7 @@ import "../Stylesheets/Badge.css"
 import { badgeDescriptions } from "./badgeDescriptions"
 import ChampionChart from "./ChampionChart"
 import NavIcon from "./NavIcon"
+import BadgeBox from "./BadgeBox"
 
 const fetchPlayerData = async (name) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
@@ -79,6 +80,7 @@ const SummonerPage = () => {
           }
         </div>
         <div className="player-piece">
+          <BadgeBox />
         </div>
         <div className="player-piece">
         </div>
