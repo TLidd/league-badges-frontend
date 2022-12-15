@@ -22,13 +22,17 @@
     opacity: 25%;
 }
 
-.badge-container img{
-    width: 75%;
+.badge-container .img-container{
+    object-fit: scale-down;
+    width: 70%;
+    height: 70%;
 }
 
 .badge-container .badge-name{
-    font-size: 50%;
+    font-size: 40%;
+    object-fit: scale-down;
     color: #bf8600;
+    white-space: nowrap;
     text-shadow: 0 0 2px black, 0 0 2px black;
 }
 

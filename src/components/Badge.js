@@ -1,6 +1,6 @@
 import "../Stylesheets/Badge.css"
 
-const Badge = ({badgeName, showBadgeText, level, earned}) => {
+const Badge = ({badgeName, badgeImage, showBadgeText, level}) => {
 
     let badgeLevels = {
         1 : "Good1",
@@ -9,21 +9,22 @@ const Badge = ({badgeName, showBadgeText, level, earned}) => {
     }
 
   return (
-    <div className={`badge-container ${badgeLevels[level]} ${!earned ? "badge-unearned" : ""}`}>
-        <img src={require(`../assets/badgeIcons/${badgeName}.png`)}></img>
+    <div className={`badge-container ${badgeLevels[level]} ${level == 0 ? "badge-unearned" : ""}`}>
+        {console.log(badgeImage)}
+        <img className="img-container" src={require(`../assets/badgeIcons/${badgeImage}.png`)}></img>
         {
             showBadgeText &&
-            <div className="badge-name">Wards Placed</div>
+            <div className="badge-name">{badgeName}</div>
         }
     </div>
   )
 }
 
 Badge.defaultProps = {
-    badgeName : "visionScore",
+    badgeName : "Vision Score",
     showBadgeText : true,
     level : 0,
-    earned : false,
+    badgeImage: "visionScore",
 }
 
 export default Badge

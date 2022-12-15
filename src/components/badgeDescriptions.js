@@ -16,3 +16,14 @@ export let playerRoles = {
     JUNGLE: "Jungle",
     UTILITY: "Support"
 }
+
+export let badgeNames = {
+    visionScore: "Vision Score",
+    damageDealtToTurrets: "Turret Damage",
+    totalMinionsKilled: "Creep Score",
+    totalDamageDealtToChampions: "Champion Damage",
+    totalDamageTaken: "Damage Taken",
+    wardsKilled: "Wards Destroyed",
+    goldEarned: "Gold Earned",
+    firstBloods: "First Bloods",
+}
