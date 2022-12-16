@@ -1,0 +1,9 @@
+.rank-container{
+    margin: auto;
+    width: 100%;
+}
+
+.rank-container img{
+    object-fit: scale-down;
+    width: 100%;
+}

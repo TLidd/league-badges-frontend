@@ -1,14 +1,14 @@
 .player-name{
-    margin-top: 3%;
-    font-size: 150%;
-    color: #bf8600;
+    font-size: 200%;
+
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -20%);
+
     display: inline-block;
-    padding: 1%;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 2px;
-    text-shadow: 0 0 3px black, 0 0 3px black;
+
+    color: #bf8600;
+    text-shadow: 0 0 6px black, 0 0 6px black;
 }
 
 .badgeBar{
@@ -51,6 +51,7 @@
     width: 95%;
     height: 80%;
     margin: auto;
+    margin-top: 8%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -59,11 +60,23 @@
 }
 
 .player-piece{
-    border: 1px solid #bf86002b;
+    border: 1px solid #c0c0c047;
     box-sizing: border-box;
     border-radius: 50px;
     margin: auto;
     height: 90%;
     width: 90%;
     overflow: hidden;
+}
+
+.player-rank-piece{
+    width: 10%;
+    
+    position: absolute;
+
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%);
+
+    z-index: -1;
 }

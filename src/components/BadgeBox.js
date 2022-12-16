@@ -54,9 +54,11 @@ const BadgeBox = ({badges}) => {
             </div>
         </div>
         <div className="badge-box-description">
-            Badges are gained by outperforming players in your games. If you perform in the top percentage for the badge category, you 
+            <p>
+                Badges are gained by outperforming players in your games. If you perform in the top percentage for the badge category, you 
             will receive a <b>Excellent</b> badge. Below that is the <b>Great</b> badge, and if you perform slightly above average in your games you
-            will receive the <b>Good</b> badge.
+            will receive the <b>Good</b> badge. 
+            </p>
         </div>
     </>
   )

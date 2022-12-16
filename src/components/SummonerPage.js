@@ -6,6 +6,7 @@ import { badgeDescriptions } from "./badgeDescriptions"
 import ChampionChart from "./ChampionChart"
 import NavIcon from "./NavIcon"
 import BadgeBox from "./BadgeBox"
+import RankImage from "./RankImage"
 
 const fetchPlayerData = async (name) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
@@ -32,9 +33,9 @@ const SummonerPage = () => {
       { 
         // data &&
         // <div>
-          <div className="player-name">
-            {data?.SummonerName}
-          </div>
+        <div className="player-name">
+          {data?.SummonerName}
+        </div>
         //   {
         //     <div>
         //       {
@@ -71,13 +72,19 @@ const SummonerPage = () => {
         //   <button className="button" onClick={() => navigate(`/`)}>New Search</button>
         // </div>
       }
+      <div className="player-rank-piece">
+            <RankImage tier={data?.tier} rank={data?.rank}/>
+      </div>
       <div className="player-container">
         <div className="player-piece">
           <BadgeBox badges={data?.badges}/>
         </div>
-        <div className="player-piece">
+        <div className="player-piece" style={{"border" : "none"}}>
           {
-            data && <ChampionChart data={data}/>
+            data && 
+            <div style={{"margin-top" : "25%"}}>
+              <ChampionChart data={data}/>
+            </div>
           }
         </div>
         <div className="player-piece">
