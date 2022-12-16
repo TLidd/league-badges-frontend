@@ -4,6 +4,10 @@
     margin: auto;
     
     box-sizing: border-box;
+
+    position: relative;
+    top: 15%;
+    transform: translate(0, -15%);
 }
 
 .badge-box-scroll-container{
@@ -69,7 +73,6 @@
 
     display: flex;
 
-    box-sizing: border-box;
 }
 
 .legend-item{
@@ -98,4 +101,26 @@
     color: #bf8600;
     text-shadow: 0 0 3px black, 0 0 3px black;
 }
+
+.badge-box-description{
+    position: relative;
+    top: 20%;
+    transform: translate(0, -20%);
+    
+    margin: auto;
+
+    width: 90%;
+    height: 15%;
+
+    border: 2px solid #020e1e69;
+    border-radius: 15px;
+    background-color: #020e1e25;
+
+    font-size: 15px;
+    color: #a39e93;
+    text-shadow: 0 0 2px black, 0 0 2px black;
+}
   
+.badge-box-description b{
+    color: #bf8600;
+}
