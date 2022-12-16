@@ -1,8 +1,15 @@
 .badge-box-container{
     width: 80%;
-    height: 50%;
-
+    height: 60%;
     margin: auto;
+    
+    box-sizing: border-box;
+}
+
+.badge-box-scroll-container{
+    margin: auto;
+    width: 95%;
+    height: 80%;
     overflow: hidden;
 
     border: 5px solid #020e1e69;
@@ -11,9 +18,10 @@
 }
 
 .box-scroll{
-    width: 100%;
+    width: auto;
     height: 100%;
     overflow-y: scroll;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto
@@ -45,5 +53,49 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #bf8600; 
+}
+
+.badge-box-legend{
+    width: 75%;
+    height: 20%;
+
+    margin: auto;
+    margin-top: 2%;
+
+    border-radius: 50px;
+
+    border: 2px solid #020e1e69;
+    background-color: #020e1e25;
+
+    display: flex;
+
+    box-sizing: border-box;
+}
+
+.legend-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+.legend-item .level-square{
+    border: 1px solid #bf8600;
+    border-radius: 5px;
+
+    width: 25%;
+    aspect-ratio: 1/1;
+
+    display: block;
+}
+
+.legend-item .level-name{
+    font-size: 65%;
+    color: #bf8600;
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }
   
