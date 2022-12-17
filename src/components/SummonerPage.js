@@ -81,7 +81,7 @@ const SummonerPage = () => {
         <div className="player-piece" style={{"border" : "none"}}>
           {
             data && 
-            <div style={{"margin-top" : "25%"}}>
+            <div style={{"marginTop" : "25%"}}>
               <ChampionChart data={data}/>
             </div>
           }
