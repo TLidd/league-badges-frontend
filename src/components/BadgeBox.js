@@ -40,15 +40,15 @@ const BadgeBox = ({badges}) => {
             {/* a legend for the box so users understand the values of the badges */}
             <div className="badge-box-legend">
                 <div className="legend-item">
-                    <div className="level-square Excellent1" />
+                    <div className="level-square Excellent" />
                     <div className="level-name">Excellent</div>
                 </div>
                 <div className="legend-item">
-                    <div className="level-square Great1" />
+                    <div className="level-square Great" />
                     <div className="level-name">Great</div>
                 </div>
                 <div className="legend-item">
-                    <div className="level-square Good1" />
+                    <div className="level-square Good" />
                     <div className="level-name">Good</div>
                 </div>
             </div>
