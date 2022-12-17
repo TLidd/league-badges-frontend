@@ -6,7 +6,7 @@ const ActiveGame = ({searchedName, actualName}) => {
     const navigate = useNavigate();
 
     const SummonerPage = (e) => {
-        navigate(`/${searchedName}`);
+        navigate(`/account/${searchedName}`);
     }
 
     const SumForm = (e) => {

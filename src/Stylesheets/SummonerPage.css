@@ -21,7 +21,8 @@
     border-radius: 40px;
 }
 
-.noSummoner{
+.no-summoner{
+    font-size: 150%;
     margin: 0;
     position: absolute;
     top: 45%;
@@ -31,6 +32,10 @@
 }
 
 .activeGameButton{
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%);
+
     font-size: 60%;
     padding: 5px;
     border-radius: 10px;

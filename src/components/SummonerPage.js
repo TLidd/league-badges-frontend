@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import {useQuery} from "@tanstack/react-query"
 import "../Stylesheets/SummonerPage.css"
-import { badgeDescriptions } from "./badgeDescriptions"
 import ChampionChart from "./ChampionChart"
 import NavIcon from "./NavIcon"
 import BadgeBox from "./BadgeBox"
@@ -27,68 +26,55 @@ const SummonerPage = () => {
   }
 
   return (
-    <div style={{"height" : "100%"}}>
+    <div style={{height: "100%"}}>
       <NavIcon/>
-      { 
-        // data &&
-        // <div>
-        <div className="player-name">
-          {data?.SummonerName}
-        </div>
-        //   {
-        //     <div>
-        //       {
-        //         <div className="badgeBar">
-        //           {/* create a bar with all the badges the user has */}
-        //           {
-        //             Object.keys(data?.badges).length > 0  ?
-        //             Object.keys(data?.badges).map((badge) => {
-        //               return  <div title={`${badgeDescriptions[badge]} ${badgeLevel[data.badges[badge]]}`} className={`${badgeLevel[data.badges[badge]]} badgeBarBadge`} key={`${badge}`}>
-        //                         <img src={require(`../assets/badgeIcons/${badge}.png`)} alt=""/>
-        //                       </div>
-        //             })
-        //             :
-        //             <div className="emptyBadges"/>
-        //           }
-        //         </div>
-        //       }
-        //     </div>
-        //   }
-        //   <div>
-        //     <button className="activeGameButton" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
-        //   </div>
-        //   {
-        //     data && <ChampionChart data={data}/>
-        //   }
-        // </div>
-      }
       {
-        // !data && 
-        // <div className="noSummoner">
-        //   <div>
-        //     {`${name} does not exist.`}
-        //   </div>
-        //   <button className="button" onClick={() => navigate(`/`)}>New Search</button>
-        // </div>
-      }
-      <div className="player-rank-piece">
-            <RankImage tier={data?.tier} rank={data?.rank}/>
-      </div>
-      <div className="player-container">
-        <div className="player-piece">
-          <BadgeBox badges={data?.badges}/>
-        </div>
-        <div className="player-piece" style={{"border" : "none"}}>
-          {
-            data && 
-            <div style={{"marginTop" : "25%"}}>
-              <ChampionChart data={data}/>
+        data &&
+        <div style={{height: "100%"}}>
+
+          <div className="player-name">
+            {data?.SummonerName}
+          </div>
+
+          <div className="player-rank-piece">
+                <RankImage tier={data?.tier} rank={data?.rank}/>
+          </div>
+
+          <div className="player-container">
+
+            <div className="player-piece">
+              <BadgeBox badges={data?.badges}/>
             </div>
-          }
+
+            <div className="player-piece" style={{"border" : "none"}}>
+              <div>
+                <button className="activeGameButton" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
+              </div>
+              {
+                data && 
+                <div style={{"marginTop" : "25%"}}>
+                  <ChampionChart data={data}/>
+                </div>
+              }
+            </div>
+
+            <div className="player-piece">
+            </div>
+
+          </div>
         </div>
-        <div className="player-piece">
+      }
+      
+      { //if summoner does not exist send them to main page.
+        !data && !isLoading &&
+        <div className="no-summoner">
+          <div>
+            {`${name} does not exist.`}
+          </div>
+          <button className="button" onClick={() => navigate(`/`)}>New Search</button>
         </div>
-      </div>
+      }
+
     </div>
   )
 }
