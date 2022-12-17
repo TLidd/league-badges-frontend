@@ -4,7 +4,7 @@
 
     border: 1px #bf8600;
     border-style: solid;
-    border-radius: 15px;
+    border-radius: 10px;
 
     box-sizing: border-box;
 
@@ -25,7 +25,7 @@
 .badge-container .img-container{
     object-fit: scale-down;
     width: 70%;
-    height: 70%;
+    aspect-ratio: 1/1;
 }
 
 .badge-container .badge-name{
@@ -36,14 +36,14 @@
     text-shadow: 0 0 2px black, 0 0 2px black;
 }
 
-.Good1{
+.Good{
     background-color: rgba(64, 73, 70, 0.512);
 }
 
-.Great1{
+.Great{
     background-color: rgb(2, 106, 106);
 }
 
-.Excellent1{
+.Excellent{
     background-color: rgb(60, 7, 68);
 }

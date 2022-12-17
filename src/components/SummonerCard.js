@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import "../Stylesheets/SummonerCard.css"
 import { badgeDescriptions, playerRoles } from "./badgeDescriptions";
+import Badge from "./Badge";
 
 const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
   let {name} = useParams();
@@ -9,8 +10,6 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
   if(sumName === undefined){
     summonerName = name;
   }
-
-  let badgeLevel = ["Good", "Great", "Excellent"];
 
   //get the searched name and highlight it by taking the route parameter and matching it to the name passed into this component.
   let nameMatch = name.toUpperCase() === summonerName.toUpperCase();
@@ -34,12 +33,13 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
       </div>
       {sumBadges && 
           <div className="grid-container">
-            <div className="badges">
+            <div className="card-badges">
               {
-                  Object.keys(sumBadges).map((badge) => {
-                    return <div title={`${badgeDescriptions[badge]} ${badgeLevel[sumBadges[badge]]}`} className={`${badgeLevel[sumBadges[badge]]} badge`} key={`${badge}`}>
-                                <img src={require(`../assets/badgeIcons/${badge}.png`)} alt=""/>
-                            </div>
+                  Object.keys(sumBadges).map((badge, index) => {
+                    if(index >= 9) return;
+                    return <div className="badge-place" title={`${badgeDescriptions[badge]} ${sumBadges[badge]}`} key={badge}>
+                            <Badge showBadgeText={false} badgeImage={badge} level={sumBadges[badge]} />
+                          </div>  
                   })
               }
             </div>

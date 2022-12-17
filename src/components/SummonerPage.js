@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import {useQuery} from "@tanstack/react-query"
 import "../Stylesheets/SummonerPage.css"
-import "../Stylesheets/Badges.css"
 import { badgeDescriptions } from "./badgeDescriptions"
 import ChampionChart from "./ChampionChart"
 import NavIcon from "./NavIcon"
