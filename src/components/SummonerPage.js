@@ -58,11 +58,12 @@ const SummonerPage = () => {
                 </div>
               }
             </div>
-
-            <div className="player-piece">
-              <RankedOverview />
-            </div>
-
+            {
+              data &&
+              <div className="player-piece">
+                <RankedOverview wins={data?.matchHistory.wins} losses={data?.matchHistory.losses} matchHistory={data?.matchHistory.games}/>
+              </div>
+            }
           </div>
         </div>
       }

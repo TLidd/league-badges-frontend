@@ -6,7 +6,7 @@
 
     box-sizing: border-box;
 
-    color: #bf8600;
+    color: rgba(255, 255, 255, 0.689);
     text-shadow: 0 0 3px black, 0 0 3px black;
 
 }
