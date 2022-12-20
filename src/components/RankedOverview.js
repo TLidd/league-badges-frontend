@@ -7,10 +7,10 @@ const RankedOverview = ({wins, losses, matchHistory}) => {
       <div className="overview-container">
         <div style={{textDecoration: "underline"}}>Ranked Overview</div>
         <div className="win-loss">
-          <div>Wins</div>
-          <div>Losses</div>
-          <div style={{color: "white"}}>{wins}</div>
-          <div style={{color: "white"}}>{losses}</div>
+          <div className="win-text">Wins</div>
+          <div className="lose-text">Losses</div>
+          <div className="win-loss-number">{wins}</div>
+          <div className="win-loss-number">{losses}</div>
         </div>
       </div>
       <div className="recent-games-container">
@@ -32,55 +32,6 @@ RankedOverview.defaultProps = {
     wins: 0,
     losses: 0,
     matchHistory: [
-      {
-        win: true,
-        kills: 40,
-        deaths: 40,
-        assists: 40,
-        champion: "Aatrox",
-      },
-      {
-        win: false,
-        kills: 0,
-        deaths: 0,
-        assists: 0,
-        champion: "Ahri",
-      },
-      {
-        win: false,
-        kills: 0,
-        deaths: 0,
-        assists: 0,
-        champion: "Talon",
-      },
-      {
-        win: false,
-        kills: 0,
-        deaths: 0,
-        assists: 0,
-        champion: "Ahri",
-      },
-      {
-        win: false,
-        kills: 0,
-        deaths: 0,
-        assists: 0,
-        champion: "Talon",
-      },
-      {
-        win: false,
-        kills: 0,
-        deaths: 0,
-        assists: 0,
-        champion: "Ahri",
-      },
-      {
-        win: false,
-        kills: 0,
-        deaths: 0,
-        assists: 0,
-        champion: "Talon",
-      }
     ]
 }
 

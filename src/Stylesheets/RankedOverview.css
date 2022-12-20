@@ -19,6 +19,7 @@
     width: 100%;
 
     border: 2px solid #020e1e69;
+    background-color: #020e1e25;
     border-radius: 25px;
 }
 
@@ -27,13 +28,27 @@
     display: inline-block;
 }
 
+.win-text{
+    color: rgb(0, 128, 0);
+}
+
+.lose-text{
+    color: rgba(255, 0, 0, 0.539);
+}
+
+.win-loss-number{
+    color: white;
+}
+
 .recent-games-container{
     margin: auto;
     height: 55%;
     width: 85%;
 
     overflow: hidden;
+    
     border: 2px solid #020e1e69;
+    background-color: #020e1e25;
     border-radius: 25px;
 
     margin-top: 5%;
