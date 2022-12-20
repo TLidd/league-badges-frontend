@@ -5,6 +5,7 @@ import ChampionChart from "./ChampionChart"
 import NavIcon from "./NavIcon"
 import BadgeBox from "./BadgeBox"
 import RankImage from "./RankImage"
+import RankedOverview from "./RankedOverview"
 
 const fetchPlayerData = async (name) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
@@ -59,6 +60,7 @@ const SummonerPage = () => {
             </div>
 
             <div className="player-piece">
+              <RankedOverview />
             </div>
 
           </div>
