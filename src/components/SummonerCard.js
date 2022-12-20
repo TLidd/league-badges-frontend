@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import "../Stylesheets/SummonerCard.css"
 import { badgeDescriptions, playerRoles } from "./badgeDescriptions";
-import Badge from "./Badge";
+import Badge from "./GeneralComponents/Badge";
 
 const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
   let {name} = useParams();

@@ -1,6 +1,6 @@
 import './App.css';
-import SummonerForm from "./components/SummonerForm";
-import SummonerPage from './components/SummonerPage';
+import SummonerForm from './components/SummonerForm';
+import SummonerPage from './components/SummonerPage/SummonerPage';
 import SummonerLobby from './components/SummonerLobby';
 import HelpPage from './components/HelpPage';
 

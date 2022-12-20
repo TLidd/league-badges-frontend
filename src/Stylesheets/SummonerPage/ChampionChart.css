@@ -1,0 +1,29 @@
+.championChart{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.championLegend{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    width: 80%;
+    top: 80%;
+}
+
+.championIcon{
+    border-radius: 50%;
+    width: 20%;
+}
+
+.chartContainer{
+    position: relative;
+}

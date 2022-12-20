@@ -5,8 +5,8 @@ import SummonerCard from "./SummonerCard"
 import "../Stylesheets/SummonerLobby.css"
 import useGetFetch from "./useGetFetch";
 import ActiveGame from "./ActiveGame";
-import NavIcon from "./NavIcon";
-import Loading from "./Loading";
+import NavIcon from "./GeneralComponents/NavIcon";
+import Loading from "./GeneralComponents/Loading";
 
 const fetchPlayerData = async (name, currentChamp) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
