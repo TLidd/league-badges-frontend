@@ -34,7 +34,7 @@
 }
 
 .nameplate-img{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.047);
     border: 2px solid #bf8600;
     width: 25%;
     height: 70%;
