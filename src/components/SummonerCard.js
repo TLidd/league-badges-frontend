@@ -2,8 +2,9 @@ import { useParams, Link } from "react-router-dom";
 import "../Stylesheets/SummonerCard.css"
 import { badgeDescriptions, playerRoles } from "./badgeDescriptions";
 import Badge from "./GeneralComponents/Badge";
+import RankImage from "./GeneralComponents/RankImage";
 
-const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
+const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTier, sumRank}) => {
   let {name} = useParams();
 
   let summonerName = sumName;
@@ -26,6 +27,9 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
           summonerName
         }
         <img className="nameplate-img" src={require(`../assets/tiles/${sumChamp}_0.jpg`)} alt=""></img>
+        <div className="card-rank">
+          <RankImage tier={sumTier} rank={sumRank}/>
+        </div>
       </div>
       <div className="played-role">
         <div className="role-text">Most Played Role</div>
@@ -36,7 +40,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame}) => {
             <div className="card-badges">
               {
                   Object.keys(sumBadges).map((badge, index) => {
-                    if(index >= 9) return;
+                    if(index <= 9) return null;
                     return <div className="badge-place" title={`${badgeDescriptions[badge]} ${sumBadges[badge]}`} key={badge}>
                             <Badge showBadgeText={false} badgeImage={badge} level={sumBadges[badge]} />
                           </div>  

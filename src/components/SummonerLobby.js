@@ -84,7 +84,8 @@ const SummonerLobby = () => {
                     {
                     team1.map(player => {
                         return  <div className="flexbox-item blue-team" key={player.data.SummonerName}>
-                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true}/>
+                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} 
+                                    sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true} sumTier={player.data.tier} sumRank={player.data.rank}/>
                                 </div>
                     })
                     }
@@ -94,7 +95,8 @@ const SummonerLobby = () => {
                     {
                     team2.map(player => {
                         return  <div className="flexbox-item red-team" key={player.data.SummonerName}>
-                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true}/>
+                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} 
+                                    sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true} sumTier={player.data.tier} sumRank={player.data.rank}/>
                                 </div>
                     })
                     }
