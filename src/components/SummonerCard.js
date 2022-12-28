@@ -40,7 +40,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
             <div className="card-badges">
               {
                   Object.keys(sumBadges).map((badge, index) => {
-                    if(index <= 9) return null;
+                    if(index >= 9) return null;
                     return <div className="badge-place" title={`${badgeDescriptions[badge]} ${sumBadges[badge]}`} key={badge}>
                             <Badge showBadgeText={false} badgeImage={badge} level={sumBadges[badge]} />
                           </div>  
