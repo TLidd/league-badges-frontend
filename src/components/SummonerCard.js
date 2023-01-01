@@ -16,6 +16,8 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
   let nameMatch = name.toUpperCase() === summonerName.toUpperCase();
   let highlight = nameMatch ? "highlightSummoner" : "lobbyParticipant";
 
+  let badgeLevels = ["Good", "Great", "Excellent"];
+
   return (
     <div className="card">
       <div className="namePlate">
@@ -41,7 +43,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
               {
                   Object.keys(sumBadges).map((badge, index) => {
                     if(index >= 9) return null;
-                    return <div className="badge-place" title={`${badgeDescriptions[badge]} ${sumBadges[badge]}`} key={badge}>
+                    return <div className="badge-place" title={`${badgeDescriptions[badge]} ${badgeLevels[sumBadges[badge]]}`} key={badge}>
                             <Badge showBadgeText={false} badgeImage={badge} level={sumBadges[badge]} />
                           </div>  
                   })
