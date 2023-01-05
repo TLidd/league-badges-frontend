@@ -41,7 +41,7 @@ function App() {
           </Routes>
         </Router>
       }
-      <ServerState serverPingingFn={pingingServerCallback} serverOnlineFn={serverOfflineCallback} retries={6} intervalTimer={10}/>
+      <ServerState serverPingingFn={pingingServerCallback} serverOnlineFn={serverOfflineCallback} retries={12} intervalTimer={5}/>
       {!serverOnline && pingingServer &&
         <div className='ping-container'>
           <div className='pinging-server'>Connecting to server please wait.</div>
