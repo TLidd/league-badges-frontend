@@ -13,8 +13,6 @@
     justify-content: center;
     align-items: center;
 
-    pointer-events: none;
-
 }
 
 .badge-unearned{
@@ -34,6 +32,7 @@
     color: #bf8600;
     white-space: nowrap;
     text-shadow: 0 0 2px black, 0 0 2px black;
+    pointer-events: none;
 }
 
 .Good{
