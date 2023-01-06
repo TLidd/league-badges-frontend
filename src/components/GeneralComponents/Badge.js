@@ -30,7 +30,7 @@ const Badge = ({badgeName, badgeImage, showBadgeText, level}) => {
         }
         {   //hides the hoverText until hover and won't display if the badge text is set to show
             !showBadgeText &&
-            <p className={`hoverText ${hoverText ? "reveal" : "hide"}`}> {`${badgeDescriptions[badgeImage]}`} <p className={`${badgeLevels[level]}Text`}> {`${badgeLevels[level]}`} </p> </p>
+            <div className={`hoverText ${hoverText ? "reveal" : "hide"}`}> {`${badgeDescriptions[badgeImage]}`} <div className={`${badgeLevels[level]}Text`}> {`${badgeLevels[level]}`} </div> </div>
         }
     </div>
   )

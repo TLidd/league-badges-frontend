@@ -7,7 +7,7 @@
 }
 
 .name{
-    font-size: 80%;
+    font-size: 75%;
     font-weight: bold;
     transition-duration: 0.25s;
     display: inline-block;
@@ -19,7 +19,7 @@
 }
 
 .name:hover{
-    font-size: 85%;
+    font-size: 80%;
     color: #bf8600;
 }
 
