@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../Stylesheets/GeneralStyles/Badge.css"
+import { badgeDescriptions } from "../badgeDescriptions";
 
 //badgeImage is passed as the text name of the image not an actual html image
 const Badge = ({badgeName, badgeImage, showBadgeText, level}) => {
@@ -27,9 +28,9 @@ const Badge = ({badgeName, badgeImage, showBadgeText, level}) => {
             showBadgeText &&
             <div className="badge-name">{badgeName}</div>
         }
-        {
-            hoverText && !showBadgeText &&
-            <div> YES </div>
+        {   //hides the hoverText until hover and won't display if the badge text is set to show
+            !showBadgeText &&
+            <p className={`hoverText ${hoverText ? "reveal" : "hide"}`}> {`${badgeDescriptions[badgeImage]}`} <p className={`${badgeLevels[level]}Text`}> {`${badgeLevels[level]}`} </p> </p>
         }
     </div>
   )

@@ -13,6 +13,8 @@
     justify-content: center;
     align-items: center;
 
+    position: relative;
+
 }
 
 .badge-unearned{
@@ -45,4 +47,47 @@
 
 .Excellent{
     background-color: rgb(60, 7, 68);
+}
+
+.GoodText{
+    display: inline;
+    color: rgb(50, 56, 54);
+}
+
+.GreatText{
+    display: inline;
+    color: rgb(2, 63, 63);
+}
+
+.ExcellentText{
+    display: inline;
+    color: rgb(39, 5, 44);
+}
+
+.hoverText{
+    background-color: whitesmoke;
+
+    border: 1px solid black;
+    border-radius: 15px;
+
+    width: max-content;
+    padding: 5px;
+    font-size: 12px;
+
+    position: absolute;
+    display: inline;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    transition-duration: 0.5s;
+}
+
+.reveal{
+    opacity: 1;
+}
+
+.hide{
+    opacity: 0;
 }
