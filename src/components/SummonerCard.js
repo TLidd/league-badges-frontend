@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import "../Stylesheets/SummonerCard.css"
-import { badgeDescriptions, playerRoles } from "./badgeDescriptions";
+import { playerRoles } from "./badgeDescriptions";
 import Badge from "./GeneralComponents/Badge";
 import RankImage from "./GeneralComponents/RankImage";
 
@@ -15,8 +15,6 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
   //get the searched name and highlight it by taking the route parameter and matching it to the name passed into this component.
   let nameMatch = name.toUpperCase() === summonerName.toUpperCase();
   let highlight = nameMatch ? "highlightSummoner" : "lobbyParticipant";
-
-  let badgeLevels = ["Good", "Great", "Excellent"];
 
   return (
     <div className="card">
@@ -43,7 +41,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
               {
                   Object.keys(sumBadges).map((badge, index) => {
                     if(index >= 9) return null;
-                    return <div className="badge-place" title={`${badgeDescriptions[badge]} ${badgeLevels[sumBadges[badge]]}`} key={badge}>
+                    return <div className="badge-place" key={badge}>
                             <Badge showBadgeText={false} badgeImage={badge} level={sumBadges[badge]} />
                           </div>  
                   })
