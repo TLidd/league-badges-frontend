@@ -15,6 +15,91 @@
     width: 80%;
 }
 
+/* .form-container select{
+    position: absolute;
+    top: 52%;
+    left: 75%;
+    transform: translate(-75%, -52%);
+
+    font-size: 18px;
+
+    height: 30px;
+    width: max-content;
+
+    border: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+} */
+
+form .input-box{
+    margin: auto;
+
+    display: flex;
+
+    width: 75%;
+    height: 30px;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    box-sizing: border-box;
+}
+
+form .input-box:focus-within{
+    outline: 2px solid #165496ca;
+}
+
+form .input-box .text-input{
+    width: 85%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    text-align: center;
+
+    background: none;
+}
+
+form .input-box .text-input:focus{
+    outline: none;
+}
+
+form .input-box select{
+    width: 15%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.428);
+
+    background-color: none;
+    background: none;
+
+    font-family: inherit;
+    font-size: large;
+}
+
+form .input-box select:focus{
+    outline: none;
+}
+
+/* select:active{
+    border-style: outset;
+    outline: none;
+} */
+
 .form-background{
     position: absolute;
     left: 50%;
@@ -43,6 +128,8 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: #071b30ca;
+
+    z-index: -1;
 }
 
 form label{
@@ -61,7 +148,7 @@ form .textInput{
     margin-right: auto;
     text-align: center;
     width: 70%;
-    font-size: 80%;
+    height: 30px;
 }
 
 form .textInput::placeholder{
