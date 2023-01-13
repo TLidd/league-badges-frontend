@@ -5,7 +5,7 @@ import Badge from "./GeneralComponents/Badge";
 import RankImage from "./GeneralComponents/RankImage";
 
 const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTier, sumRank}) => {
-  let {name} = useParams();
+  let {name, region} = useParams();
 
   let summonerName = sumName;
   if(sumName === undefined){
@@ -20,7 +20,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
     <div className="card">
       <div className="namePlate">
         {activeGame ? 
-          <Link to={`../account/${summonerName}`} className={`name ${highlight}`} style={{textDecoration: 'none'}}>
+          <Link to={`../account/${region}/${summonerName}`} className={`name ${highlight}`} style={{textDecoration: 'none'}}>
             {summonerName} 
           </Link>
           :

@@ -4,6 +4,7 @@ import "../Stylesheets/SummonerForm.css"
 import CheckSummoner from "./CheckSummoner";
 import useGetFetch from "./useGetFetch";
 import NavIcon from "./GeneralComponents/NavIcon"
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 const SummonerForm = () => {
     //useRef allows for a ref object of the form value below
@@ -11,8 +12,10 @@ const SummonerForm = () => {
 
     //the form input name the user types in (-1 is just a placeholder for a name for the first hook)
     const [formName, setFormName] = useState("-1");
-    
-    const {data, isPending, error} = useGetFetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerGame/${formName}`);
+
+    let [region, setRegion] = useState('NA');
+
+    const {data, isPending, error} = useGetFetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerGame/${formName}/${region}`);
 
     const formSubmit = (e) => {
         e.preventDefault();
@@ -21,6 +24,10 @@ const SummonerForm = () => {
             setFormName(name);
         }
         textInput.current.value = "";
+    }
+
+    const regionChange = (e) => {
+        setRegion(e.target.value);
     }
     
     return (
@@ -32,44 +39,28 @@ const SummonerForm = () => {
             <div className="form-container">
                 <form onSubmit={formSubmit}>
                     <label htmlFor="summonerName">Summoner Name:</label>
-                    {/* <input className="textInput" maxLength={16} style={{"fontSize":"18px"}} type="text" id="summonerName" ref={textInput}></input>
-                    <select >
-                        <option value={"NA"}>NA</option>
-                        <option value={"NA"}>EUW</option>
-                        <option value={"NA"}>EUNE</option>
-                        <option value={"NA"}>OC</option>
-                        <option value={"NA"}>KR</option>
-                        <option value={"NA"}>JP</option>
-                        <option value={"NA"}>BR</option>
-                        <option value={"NA"}>LA1</option>
-                        <option value={"NA"}>LA2</option>
-                        <option value={"NA"}>RU</option>
-                        <option value={"NA"}>TR</option>
-                        <option value={"NA"}>CN</option>
-                    </select> */}
                     <div className="input-box">
                         <input className="text-input" maxLength={16} style={{"fontSize":"18px"}} type="text" id="summonerName" ref={textInput}></input>
-                        <select>
+                        <select onChange={regionChange}>
                             <option value={"NA"}>NA</option>
-                            <option value={"NA"}>EUW</option>
-                            <option value={"NA"}>EUNE</option>
-                            <option value={"NA"}>OC</option>
-                            <option value={"NA"}>KR</option>
-                            <option value={"NA"}>JP</option>
-                            <option value={"NA"}>BR</option>
-                            <option value={"NA"}>LA1</option>
-                            <option value={"NA"}>LA2</option>
-                            <option value={"NA"}>RU</option>
-                            <option value={"NA"}>TR</option>
-                            <option value={"NA"}>CN</option>
+                            <option value={"EUW"}>EUW</option>
+                            <option value={"EUNE"}>EUNE</option>
+                            <option value={"OC"}>OC</option>
+                            <option value={"KR"}>KR</option>
+                            <option value={"JP"}>JP</option>
+                            <option value={"BR"}>BR</option>
+                            <option value={"LA1"}>LA1</option>
+                            <option value={"LA2"}>LA2</option>
+                            <option value={"RU"}>RU</option>
+                            <option value={"TR"}>TR</option>
                         </select>
                     </div>
                     <input className="button" type="submit" value="Find Summoner"></input>
                 </form>
                 {isPending && formName.length >= 3 && <img className="loadingGif" src={require("../assets/loading.gif")} alt="loading..."/>}
-                {data && data?.gameId && !isPending && <Navigate to={`./account/${formName}/ActiveGame`} />}
+                {data && data?.gameId && !isPending && <Navigate to={`./account/${region}/${formName}/ActiveGame`} />}
                 {/* if summoner doesn't exist or not in game CheckSummoner */}
-                {error && formName.length >= 3 && !isPending && <CheckSummoner formName={formName} data={error}/>}
+                {error && formName.length >= 3 && !isPending && <CheckSummoner formName={formName} data={error} region={region}/>}
             </div>
         </>
     )

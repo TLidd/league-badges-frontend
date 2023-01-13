@@ -16,14 +16,14 @@ const fetchPlayerData = async (name, currentChamp) => {
 }
 
 const SummonerLobby = () => {
-    let {name} = useParams();
+    let {name, region} = useParams();
 
     let [loading, setLoading] = useState(true);
 
     let [loadPercent, setLoadPercent] = useState(0);
     
     //get the lobby list of names to process the queries of each champion to cache.
-    let lobby = useGetFetch(`${process.env.REACT_APP_ROUTE_PATH}/getLobbyList/${name}`);
+    let lobby = useGetFetch(`${process.env.REACT_APP_ROUTE_PATH}/getLobbyList/${name}/${region}`);
 
     let gameParticipants = null;
     let playerChamp = {};
@@ -104,7 +104,7 @@ const SummonerLobby = () => {
             </div>
         
         }
-        {lobby.error && team1 !== [] && team2 !== [] && <ActiveGame searchedName={name} actualName={lobby.error?.summonerName}/>}
+        {lobby.error && team1 !== [] && team2 !== [] && <ActiveGame searchedName={name} actualName={lobby.error?.summonerName} region={region}/>}
 
     </div>
     

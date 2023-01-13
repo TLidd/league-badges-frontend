@@ -2,11 +2,11 @@
 import { useNavigate } from "react-router-dom"
 import "../Stylesheets/ActiveGame.css"
 
-const ActiveGame = ({searchedName, actualName}) => {
+const ActiveGame = ({searchedName, actualName, region}) => {
     const navigate = useNavigate();
 
     const SummonerPage = (e) => {
-        navigate(`/account/${searchedName}`);
+        navigate(`/account/${region}/${searchedName}`);
     }
 
     const SumForm = (e) => {

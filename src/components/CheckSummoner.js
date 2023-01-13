@@ -4,7 +4,7 @@ import {Navigate} from "react-router-dom";
 import "../Stylesheets/CheckSummoner.css"
 
 // check if summoner exists if not display does not exist
-const NoSummoner = ({formName, data}) => {
+const NoSummoner = ({formName, data, region}) => {
     let [summonerExists, setExists] = useState(true);
 
     //sets timer to display a does not exist message for 10 seconds
@@ -32,7 +32,7 @@ const NoSummoner = ({formName, data}) => {
                 </div>
             }
 
-            {summonerExists && data?.summonerName && <Navigate to={`./account/${data?.summonerName}`} />}   
+            {summonerExists && data?.summonerName && <Navigate to={`./account/${region}/${data?.summonerName}`} />}   
         </div>
     )
 }

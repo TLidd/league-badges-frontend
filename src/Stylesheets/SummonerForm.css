@@ -15,25 +15,6 @@
     width: 80%;
 }
 
-/* .form-container select{
-    position: absolute;
-    top: 52%;
-    left: 75%;
-    transform: translate(-75%, -52%);
-
-    font-size: 18px;
-
-    height: 30px;
-    width: max-content;
-
-    border: none;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-} */
-
 form .input-box{
     margin: auto;
 
@@ -76,8 +57,7 @@ form .input-box select{
 
     text-align: center;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
     text-indent: 1px;
     text-overflow: '';
 
@@ -94,11 +74,6 @@ form .input-box select{
 form .input-box select:focus{
     outline: none;
 }
-
-/* select:active{
-    border-style: outset;
-    outline: none;
-} */
 
 .form-background{
     position: absolute;
@@ -139,20 +114,6 @@ form label{
     font-size: 140%;
     color: #bf8600;
     text-shadow: 0 0 2px black, 0 0 2px black;
-}
-
-form .textInput{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 70%;
-    height: 30px;
-}
-
-form .textInput::placeholder{
-    color: rgba(128, 128, 128, 0.472);
 }
 
 form .button{

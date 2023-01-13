@@ -7,19 +7,19 @@ import BadgeBox from "./BadgeBox"
 import RankImage from "../GeneralComponents/RankImage"
 import RankedOverview from "./RankedOverview"
 
-const fetchPlayerData = async (name) => {
-    const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
+const fetchPlayerData = async (name, region) => {
+    const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}/${region}`);
     return res.json();
 }
 
 const SummonerPage = () => {
   const navigate = useNavigate();
 
-  let {name} = useParams();
+  let {name, region} = useParams();
 
   const {data, isLoading} = useQuery(
       ['summonerBadgeData', name.toLowerCase()],
-      () => fetchPlayerData(name),
+      () => fetchPlayerData(name, region),
   );
 
   if(isLoading){
