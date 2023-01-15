@@ -18,7 +18,7 @@ const RankedOverview = ({wins, losses, matchHistory}) => {
           {matchHistory &&
             matchHistory.map((match, index) => {
               return <div className="recent-game" key={index}>     
-                <RankedGame win={match.win} kills={match.kills} deaths={match.deaths} assists={match.assists} champion={match.champion}/>
+                <RankedGame win={match.win} kills={match.kills} deaths={match.deaths} assists={match.assists} champion={match.champion} playerItems={match.items}/>
               </div>
             })
           }

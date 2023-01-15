@@ -107,7 +107,7 @@ const ChampionChart = ({data}) => {
                     Object.values(data.champions).slice(0,champsToShow).map((champ, index) => {
                         return <img className='championIcon' key={champ.champData.champName} 
                         style={{border: shownChampions.includes(champ.champData.champName) ? '4px solid ' + graphColors[index].slice(0,7) : '4px solid #FFFFFF00'}} 
-                        src={require(`../../assets/tiles/${champ.champData.champName}_0.jpg`)}
+                        src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champ.champData.champName}.png`}
                         name={champ.champData.champName} alt={champ.champData.champName}
                         onClick={championClicked}/>
                     })

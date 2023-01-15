@@ -8,8 +8,8 @@ import ActiveGame from "./ActiveGame";
 import NavIcon from "./GeneralComponents/NavIcon";
 import Loading from "./GeneralComponents/Loading";
 
-const fetchPlayerData = async (name, currentChamp) => {
-    const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}`);
+const fetchPlayerData = async (name, currentChamp, region) => {
+    const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}/${region}`);
     let data = await res.json();
     data.currentChamp = currentChamp;
     return data;
@@ -39,7 +39,7 @@ const SummonerLobby = () => {
         queries: lobby?.data ? gameParticipants.map(participant => {
             return {
                 queryKey: ['summonerBadgeData', participant.toLowerCase()],
-                queryFn: () => fetchPlayerData(participant, playerChamp[participant]),
+                queryFn: () => fetchPlayerData(participant, playerChamp[participant], region),
                 enabled: !!lobby,
             }
         }) : []
