@@ -1,7 +1,7 @@
 import "../../Stylesheets/SummonerPage/RankedGame.css"
 import { useState } from "react";
 
-const RankedGame = ({win, kills, deaths, assists, champion, playerItems}) => {
+const RankedGame = ({win, kills, deaths, assists, champion, playerItems, gameStats}) => {
   let [moreGameInfo, setMoreGameInfo] = useState(false);
 
   const showMoreInfo = () => {
@@ -26,12 +26,14 @@ const RankedGame = ({win, kills, deaths, assists, champion, playerItems}) => {
           })
         }
         </div>
-        <button onClick={showMoreInfo} className="ranked-game-button">
+        <button onClick={showMoreInfo} className="ranked-game-button" style={moreGameInfo ? {transform: "rotate(-3.142rad)"} : {}}>
           ˅
         </button>
       </div>
-      <div className={`more-info-box ${win ? "won-game" : "lost-game"}`}>
-        
+      <div className={`more-info-box ${win ? "won-game" : "lost-game"}`} style={{backgroundColor: "rgba(0, 0, 0, 0.00)"}}>
+        {
+          Object.keys(gameStats).map(key => <div className="more-info-stat">{`${key} : ${gameStats[key]}`}</div>)
+        }
       </div>
     </div>
     
@@ -44,7 +46,8 @@ RankedGame.defaultProps = {
   deaths: 0,
   assists: 0,
   champion: "Aatrox",
-  playerItems: new Array(7).fill(1)
+  playerItems: new Array(7).fill(1),
+  gameStats: {"test": 7, "test1": 8, "test2": 7, "test3": 7, "test4": 7, "test5": 7}
 }
 
 export default RankedGame
