@@ -98,7 +98,7 @@ const ChampionChart = ({data}) => {
 
     return (
         <div className='chartContainer'>
-            <div className='chartToolTip' data-tooltip="This chart is calculated by...">
+            <div className='chartToolTip' data-tooltip="Culpa consectetur dolore duis nulla fugiat veniam laboris velit esse labore. Et adipisicing incididunt commodo labore. Voluptate amet mollit aliquip occaecat non sint incididunt reprehenderit ex et consectetur consequat non ex. Anim voluptate eu dolor veniam. Quis sunt ad exercitation excepteur proident ex. Labore fugiat veniam dolor in culpa cillum officia enim adipisicing.">
                 <div className='chartTool-icon'>?</div>
             </div>
             {

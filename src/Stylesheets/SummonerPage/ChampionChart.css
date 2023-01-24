@@ -30,7 +30,7 @@
 
 .chartToolTip{
     --tooltip-color: rgba(0, 255, 255, 0.214);
-    --tooltip-hover-color: rgba(0, 255, 255, 0.416);
+    --tooltip-hover-color: rgba(0, 255, 255, 0.658);
 
     position: absolute;
     left: 10%;
@@ -65,20 +65,35 @@
     border-color: var(--tooltip-hover-color);
 }
 
-.chartToolTip:hover::after{
+.chartToolTip::after{
     content: attr(data-tooltip);
 
-    position: absolute;
-    left: 100%;
-    top: 0;
+    visibility: hidden;
+    opacity: 0%;
 
-    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    white-space: wrap;
+    width: 25rem;
 
     padding: 1rem 2rem;
     background-color: #031328;
 
+    border: 2px solid rgba(0, 0, 0, 0.666);
+    border-radius: 10px;
+
     font-size: 1rem;
-    color: white;
+    color: rgba(255, 255, 255, 0.677);
+
+    transition-duration: 0.5s;
+}
+
+.chartToolTip:hover::after{
+    visibility: visible;
+    opacity: 100%;
+    top: 150%;
 }
 
 .chartToolTip:hover .chartTool-icon{
