@@ -155,10 +155,15 @@
     border-left: none;
     border-right: none;
     border-bottom: none;
+
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .more-info-stat{
     width: 33%;
 
-    font-size: 1.5rem;
+    font-size: 1.0rem;
+
+    color: rgba(255, 255, 255, 0.626);
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }

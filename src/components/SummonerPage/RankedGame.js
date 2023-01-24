@@ -30,9 +30,9 @@ const RankedGame = ({win, kills, deaths, assists, champion, playerItems, gameSta
           ˅
         </button>
       </div>
-      <div className={`more-info-box ${win ? "won-game" : "lost-game"}`} style={{backgroundColor: "rgba(0, 0, 0, 0.00)"}}>
+      <div className={`more-info-box ${win ? "won-game" : "lost-game"}`}>
         {
-          Object.keys(gameStats).map(key => <div className="more-info-stat">{`${key} : ${gameStats[key]}`}</div>)
+          Object.keys(gameStats).map(key => <div className="more-info-stat">{`${key}\u00A0 : \u00A0${gameStats[key]}`}</div>)
         }
       </div>
     </div>
@@ -47,7 +47,7 @@ RankedGame.defaultProps = {
   assists: 0,
   champion: "Aatrox",
   playerItems: new Array(7).fill(1),
-  gameStats: {"test": 7, "test1": 8, "test2": 7, "test3": 7, "test4": 7, "test5": 7}
+  gameStats: {"test": 7, "test1": 8, "test2": 7, "test3": 7, "test4": 7, "test5": 7, "test6": 6},
 }
 
 export default RankedGame

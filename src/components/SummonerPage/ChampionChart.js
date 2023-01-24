@@ -98,6 +98,9 @@ const ChampionChart = ({data}) => {
 
     return (
         <div className='chartContainer'>
+            <div className='chartToolTip' data-tooltip="This chart is calculated by...">
+                <div className='chartTool-icon'>?</div>
+            </div>
             {
             userData && 
             <div className='championChart'> <RadarChart chartData={userData} options={chartOptions} /> </div>
