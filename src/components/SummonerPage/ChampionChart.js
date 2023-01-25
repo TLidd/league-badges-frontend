@@ -98,7 +98,7 @@ const ChampionChart = ({data}) => {
 
     return (
         <div className='chartContainer'>
-            <div className='chartToolTip' data-tooltip="Culpa consectetur dolore duis nulla fugiat veniam laboris velit esse labore. Et adipisicing incididunt commodo labore. Voluptate amet mollit aliquip occaecat non sint incididunt reprehenderit ex et consectetur consequat non ex. Anim voluptate eu dolor veniam. Quis sunt ad exercitation excepteur proident ex. Labore fugiat veniam dolor in culpa cillum officia enim adipisicing.">
+            <div className='chartToolTip' data-tooltip="The Graph points are based off of stats gained from Riot Games from bronze to challenger level. If the player is close to the edge of a category they are reaching challenger level stats (calculated as a percentage of challenger averages). The three most recently played champions are shown and each champion can be clicked on to display or disable their&nbsp;graph.">
                 <div className='chartTool-icon'>?</div>
             </div>
             {

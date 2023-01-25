@@ -36,7 +36,7 @@
     left: 10%;
     top: 10%;
 
-    width: 2.75rem;
+    width: 7%;
     aspect-ratio: 1/1;
 
     border: 2px solid var(--tooltip-color);  
@@ -53,10 +53,9 @@
 
     color: var(--tooltip-color);
 
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 
-    transition: 0.1s font-size ease-in-out,
-    0.1s color ease-out;
+    transition: 0.1s color ease-out;
 
     pointer-events: none;
 }
@@ -73,7 +72,7 @@
 
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 120%;
 
     white-space: wrap;
     width: 25rem;
@@ -85,9 +84,12 @@
     border-radius: 10px;
 
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.677);
+    color: rgba(255, 255, 255, 0.557);
+    text-shadow: 0 0 2px black, 0 0 2px black;
 
     transition-duration: 0.5s;
+
+    pointer-events: none;
 }
 
 .chartToolTip:hover::after{
@@ -97,6 +99,5 @@
 }
 
 .chartToolTip:hover .chartTool-icon{
-    font-size: 1.75rem;
     color: var(--tooltip-hover-color);
 }
