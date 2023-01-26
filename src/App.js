@@ -24,7 +24,7 @@ function App() {
   }
 
   if(!serverOnline && !pingingServer){
-    return <div className='server-down'>Server is <div className='offline-text'>offline</div>. Please Try again later.</div>
+    return <span className='server-down'>Server is <span className='offline-text'>offline</span>. Please Try again later.</span>
   }
 
   return (
@@ -44,7 +44,7 @@ function App() {
       <ServerState serverPingingFn={pingingServerCallback} serverOnlineFn={serverOfflineCallback} retries={12} intervalTimer={5}/>
       {!serverOnline && pingingServer &&
         <div className='ping-container'>
-          <div className='pinging-server'>Connecting to server please wait.</div>
+          <span className='pinging-server'>Connecting to server please wait.</span><br/>
           <img className='ping-gif' src={require('./assets/loading.gif')} alt=''></img>
         </div>
       }

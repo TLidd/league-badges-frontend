@@ -1,57 +1,52 @@
+html{
+  --league-gold-color: #bf8600;
+  font-family: 'Kanit', sans-serif;
+  font-size: 62.5%;
+}
+
 .App {
   text-align: center;
   height: 100vh;
-  font-family: 'Kanit', sans-serif;
-  font-size: calc(10px + 2vmin);
-}
-
-.pinging-server{
-  font-size: 150%;
-  color: #bf8600;
-  text-shadow: 0 0 2px black, 0 0 2px black;
-  font-family: 'Kanit', sans-serif;
 }
 
 .ping-container{
+  font-size: 4rem;
   margin: auto;
-
-  width: 50%;
-  height: 20%;
 
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.ping-gif{
-  margin-top: 5%;
-  width: 7%;
+.ping-container .pinging-server{
+  color: var(--league-gold-color);
+  text-shadow: 0 0 2px black, 0 0 2px black;
+}
+
+.ping-container .ping-gif{
+  margin-top: 2rem;
+  width: 5rem;
 }
 
 .server-down{
   margin: auto;
 
-  width: 100%;
-  height: 100%;
+  width: 50%;
 
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%);
 
-  font-size: 250%;
+  font-size: 4rem;
 
   text-align: center;
 
-  color: #bf8600;
+  color: var(--league-gold-color);
   text-shadow: 0 0 2px black, 0 0 2px black;
-  font-family: 'Kanit', sans-serif;
 }
 
 .server-down .offline-text{
   color: rgb(114, 1, 1);
   text-shadow: 0 0 2px black, 0 0 2px black;
-  font-family: 'Kanit', sans-serif;
-
-  display: inline-block;
 }

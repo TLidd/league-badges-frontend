@@ -24,8 +24,8 @@
 }
 
 .icon:hover{
-    border-color: #bf8600;
-    color: #bf8600;
+    border-color: var(--league-gold-color);
+    color: var(--league-gold-color);
     cursor: pointer;
 }
 
