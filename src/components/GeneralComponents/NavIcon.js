@@ -3,10 +3,7 @@ import "../../Stylesheets/GeneralStyles/NavIcon.css"
 
 const NavIcon = ({path, icon, description}) => {
   return (
-    <div className="icon">
-      <Link className="link" to={path}>{icon}</Link>
-      <div className="icon-return">{description}</div>
-    </div>
+    <Link data-tooltip={description} className="navicon-link" to={path}>{icon}</Link>
   )
 }
 
