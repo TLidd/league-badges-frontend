@@ -1,40 +1,54 @@
-.form-container{
-    width: 30%;
-    height: 20%;
+.form-background{
+    position: absolute;
     left: 50%;
     top: 50%;
+    width: 65%;
+    aspect-ratio: 1/.60;
     transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid var(--league-gold-color);
+    overflow: hidden;
+}
+
+.form-background img{
+    position: absolute;
+    object-fit: scale-down;
+    width: 115%;
+    height: 115%;
+    transform: translate(-44%, -5%);
+    pointer-events: none;
+}
+
+.form-container{
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.form-container form{
-    width: 80%;
-}
-
-form .input-box{
-    margin: auto;
-
+.form-container form .input-box{
     display: flex;
-
-    width: 75%;
-    height: 30px;
 
     background-color: rgba(255, 255, 255, 0.7);
 
     box-sizing: border-box;
+
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
-form .input-box:focus-within{
+.form-container form .input-box:focus-within{
     outline: 2px solid #165496ca;
 }
 
-form .input-box .text-input{
+.form-container form .input-box .text-input{
     width: 85%;
-    height: 100%;
+
+    font-size: 1.8rem;
 
     box-sizing: border-box;
 
@@ -45,13 +59,12 @@ form .input-box .text-input{
     background: none;
 }
 
-form .input-box .text-input:focus{
+.form-container form .input-box .text-input:focus{
     outline: none;
 }
 
 form .input-box select{
     width: 15%;
-    height: 100%;
 
     box-sizing: border-box;
 
@@ -68,38 +81,23 @@ form .input-box select{
     background: none;
 
     font-family: inherit;
-    font-size: large;
+    font-size: 2rem;
+
+    transition-duration: 0.25s;
+}
+
+form .input-box select:hover{
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 form .input-box select:focus{
     outline: none;
 }
 
-.form-background{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 65%;
-    aspect-ratio: 1/.60;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: 2px solid #bf8600;
-    overflow: hidden;
-}
-
-.form-background img{
-    position: absolute;
-    object-fit: scale-down;
-    width: 115%;
-    height: 115%;
-    transform: translate(-44%, -5%);
-}
-
 .form-container::before{
     content: '';
     position: absolute;
-    width: 80%;
-    max-width: 600px;
+    width: 45em;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: #071b30ca;
@@ -107,33 +105,39 @@ form .input-box select:focus{
     z-index: -1;
 }
 
-form label{
-    position: relative;
-    top: -20%;
+.form-container form label{
     display: block;
-    font-size: 140%;
-    color: #bf8600;
+
+    font-size: 4rem;
+    color: var(--league-gold-color);
     text-shadow: 0 0 2px black, 0 0 2px black;
+
+    white-space: nowrap;
 }
 
-form .button{
+.form-container form .button{
     position: relative;
-    display: block;
+    top: 20%;
     margin-left: auto;
     margin-right: auto;
-    top: 20%;
-    width: 30%;
-    aspect-ratio: 1/0.3;
-    font-size: 50%;
-    border-radius: 15px;
+
+    display: block;
+
+    padding: 0.5em 0.5em;
+
+    font-size: 1.6rem;
+    
     background-color: #071b30e1;
-    color: #bf8600;
+    color: var(--league-gold-color);
+
+    border-color: var(--league-gold-color);
+    border-radius: 15px;
+
     transition-duration: 0.5s;
-    border-color: #bf8600;
 }
 
-form .button:hover{
-    background-color: #bf8600;
+.form-container form .button:hover{
+    background-color: var(--league-gold-color);
     text-shadow: 0 0 1px black, 0 0 1px black;
     text-shadow: none;
     color: #071b30;
@@ -148,6 +152,15 @@ form .button:hover{
 .loadingGif{
     position: absolute;
     top: 125%;
-    width: 10%;
-    height: 25%;
+    width: 5rem;
 } 
+
+@media screen and (max-width: 75em), screen and (orientation: landscape) and (max-height: 40em){
+    .form-background{
+        visibility: hidden;
+    }
+
+    .form-container::before{
+        visibility: hidden;
+    }
+}

@@ -40,7 +40,7 @@ const SummonerForm = () => {
                 <form onSubmit={formSubmit}>
                     <label htmlFor="summonerName">Summoner Name:</label>
                     <div className="input-box">
-                        <input className="text-input" maxLength={16} style={{"fontSize":"18px"}} type="text" id="summonerName" ref={textInput}></input>
+                        <input className="text-input" maxLength={16} type="text" id="summonerName" ref={textInput}></input>
                         <select onChange={regionChange}>
                             <option value={"NA"}>NA</option>
                             <option value={"EUW"}>EUW</option>

@@ -27,9 +27,9 @@ const NoSummoner = ({formName, data, region}) => {
         <div>
             {
                 !summonerExists && 
-                <div className="noSummonerExists">
+                <span className="noSummonerExists">
                     {`${formName} does not exist`}
-                </div>
+                </span>
             }
 
             {summonerExists && data?.summonerName && <Navigate to={`./account/${region}/${data?.summonerName}`} />}   
