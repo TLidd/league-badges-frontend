@@ -1,11 +1,12 @@
 html{
   --league-gold-color: #bf8600;
   --league-blue-color: #071b30;
+  --league-white-color: rgb(200, 200, 200);
   
   font-family: 'Kanit', sans-serif;
   font-size: 62.5%;
 
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100vh;
 }
 
