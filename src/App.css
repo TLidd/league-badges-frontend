@@ -4,11 +4,14 @@ html{
   
   font-family: 'Kanit', sans-serif;
   font-size: 62.5%;
+
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .App {
   text-align: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .ping-container{

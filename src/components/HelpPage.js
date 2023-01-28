@@ -4,8 +4,8 @@ import "../Stylesheets/HelpPage.css"
 const HelpPage = () => {
   return (
     <>
-        <h1>HOW IT WORKS</h1>
         <NavIcon />
+        <h1>HOW IT WORKS</h1>
         <div className="help-container">
             <div className="help-item">
                 <p>Enter in a summoner name to search <br/> to receive player info.</p>

@@ -3,8 +3,7 @@ import {Navigate} from "react-router-dom"
 import "../Stylesheets/SummonerForm.css"
 import CheckSummoner from "./CheckSummoner";
 import useGetFetch from "./useGetFetch";
-import NavIcon from "./GeneralComponents/NavIcon"
-import { getValue } from "@testing-library/user-event/dist/utils";
+import NavIcon from "./GeneralComponents/NavIcon";
 
 const SummonerForm = () => {
     //useRef allows for a ref object of the form value below
