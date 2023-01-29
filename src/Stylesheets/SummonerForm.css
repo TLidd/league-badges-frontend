@@ -1,4 +1,125 @@
+.form-container{
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
 .form-background{
+    margin: auto;
+    
+    width: 90%;
+    aspect-ratio: 1/.60;
+
+    border-radius: 50%;
+    border: 1px solid var(--league-gold-color);
+    overflow: hidden;
+
+    margin-bottom: 2em;
+}
+
+.form-background img{
+    width: 115%;
+    height: 115%;
+    
+    border: 1px solid var(--league-white-color);
+}
+
+.form-container form label{
+    display: block;
+
+    font-size: 2.5rem;
+    color: var(--league-gold-color);
+    text-shadow: 0 0 2px black, 0 0 2px black;
+}
+
+.form-container form .input-box{
+    margin: auto;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    box-sizing: border-box;
+
+    width: max(70%, 40ch);
+    
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+
+.form-container form .input-box:focus-within{
+    outline: 2px solid #165496ca;
+}
+
+.form-container form .input-box .text-input{
+    display: inline-block;
+    width: 85%;
+
+    font-size: 2rem;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    text-align: center;
+
+    background: none;
+}
+
+.form-container form .input-box .text-input:focus{
+    outline: none;
+}
+
+.form-container form .input-box select{
+    width: 15%;
+
+    text-align: center;
+
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    font-family: inherit;
+    font-size: 2rem;
+
+    transition-duration: 0.25s;
+}
+
+form .input-box select:focus{
+    outline: none;
+}
+
+.form-container form .button{
+    margin: auto;
+
+    max-width: 50%;
+
+    padding: 0.5em 0.5em;
+
+    font-size: 1.4rem;
+    
+    background-color: #071b30e1;
+    color: var(--league-gold-color);
+    text-shadow: 0 0 2px black, 0 0 2px black;
+
+    border-color: var(--league-gold-color);
+    border-radius: 15px;
+
+    transition-duration: 0.5s;
+}
+
+.loadingGif{
+    position: absolute;
+    top: 140%;
+    transform: translate(-50%, -140%);
+    
+    width: 5rem;
+}
+
+/* .form-background{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -154,9 +275,9 @@ form .input-box select:focus{
     position: absolute;
     top: 125%;
     width: 5rem;
-} 
+}  */
 
-@media screen and (max-width: 75em), screen and (orientation: landscape) and (max-height: 40em){
+/* @media screen and (max-width: 75em), screen and (orientation: landscape) and (max-height: 40em){
     .form-background{
         visibility: hidden;
     }
@@ -164,4 +285,4 @@ form .input-box select:focus{
     .form-container::before{
         visibility: hidden;
     }
-}
+} */

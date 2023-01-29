@@ -31,11 +31,11 @@ const SummonerForm = () => {
     
     return (
         <>
-            <NavIcon icon={'?'} description={"Help"} path={'./Help'} />
-            <div className="form-background">
-                <img src={require("../assets/mordekaiser.gif")} alt=""/>
-            </div>
+            {/* <NavIcon icon={'?'} description={"Help"} path={'./Help'} /> */}
             <div className="form-container">
+                <div className="form-background">
+                    <img src={require("../assets/mordekaiser.gif")} alt=""/>
+                </div>
                 <form onSubmit={formSubmit}>
                     <label htmlFor="summonerName">Summoner Name:</label>
                     <div className="input-box">

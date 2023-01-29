@@ -5,12 +5,12 @@ html{
   
   font-family: 'Kanit', sans-serif;
   font-size: 62.5%;
-
-  overflow-y: auto;
 }
 
 .App {
+  overflow-y: auto;
   text-align: center;
+  height: 100vh;
 }
 
 .ping-container{

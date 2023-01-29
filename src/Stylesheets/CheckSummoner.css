@@ -1,13 +1,11 @@
 .noSummonerExists{
     position: absolute;
-    transform: translate(-50%);
-    top: 200%;
+    top: 135%;
+    transform: translate(-50%, -135%);
 
-    font-size: 2.5rem;
+    font-size: 1.6rem;
 
-    color: #000000;
+    color: var(--league-white-color);
 
     white-space: nowrap;
-
-    transition-duration: 1s;
 }
