@@ -8,6 +8,8 @@
 
     font-size: 3rem;
     text-decoration: none !important;
+
+    visibility: hidden;
 }
 
 .navicon-link:hover{
@@ -59,4 +61,10 @@
 .navicon-link:hover::after{
     visibility: visible;
     opacity: 100%;
+}
+
+@media screen and (min-width: 65em) {
+    .navicon-link{
+        visibility: visible;
+    }
 }
