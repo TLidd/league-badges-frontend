@@ -1,9 +1,7 @@
 import {useRef, useState} from "react";
 import {Navigate} from "react-router-dom"
 import "../Stylesheets/SummonerForm.css"
-import CheckSummoner from "./CheckSummoner";
 import useGetFetch from "./useGetFetch";
-import NavIcon from "./GeneralComponents/NavIcon";
 
 const SummonerForm = () => {
     //useRef allows for a ref object of the form value below
@@ -12,8 +10,10 @@ const SummonerForm = () => {
     //the form input name the user types in (-1 is just a placeholder for a name for the first hook)
     const [formName, setFormName] = useState("-1");
 
-    let [region, setRegion] = useState('NA');
+    let regionSelect = useRef('NA');
 
+    let [region, setRegion] = useState('NA');
+    
     const {data, isPending, error} = useGetFetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerGame/${formName}/${region}`);
 
     const formSubmit = (e) => {
@@ -22,11 +22,12 @@ const SummonerForm = () => {
             let name = textInput.current.value;
             setFormName(name);
         }
-        textInput.current.value = "";
-    }
 
-    const regionChange = (e) => {
-        setRegion(e.target.value);
+        if(regionSelect.current.value !== ""){
+            let regionSelected = regionSelect.current.value;
+            setRegion(regionSelected);
+        }
+        textInput.current.value = "";
     }
     
     return (
@@ -40,7 +41,7 @@ const SummonerForm = () => {
                     <label htmlFor="summonerName">Summoner Name:</label>
                     <div className="input-box">
                         <input className="text-input" maxLength={16} type="text" id="summonerName" ref={textInput}></input>
-                        <select onChange={regionChange}>
+                        <select ref={regionSelect}>
                             <option value={"NA"}>NA</option>
                             <option value={"EUW"}>EUW</option>
                             <option value={"EUNE"}>EUNE</option>
@@ -56,11 +57,11 @@ const SummonerForm = () => {
                     </div>
                     <input className="button" type="submit" value="Find Summoner"></input>
                 </form>
-                {isPending && formName.length >= 3 && <img className="loadingGif" src={require("../assets/loading.gif")} alt="loading..."/>}
-                {data && data?.gameId && !isPending && <Navigate to={`./account/${region}/${formName}/ActiveGame`} />}
-                {/* if summoner doesn't exist or not in game CheckSummoner */}
-                {error && formName.length >= 3 && !isPending && <CheckSummoner formName={formName} data={error} region={region}/>}
             </div>
+
+            {formName !== "-1" && isPending && <img className="loadingGif" src={require("../assets/loading.gif")} alt="loading..."/>}
+            {!isPending && error?.summonerName && <Navigate to={`./account/${region}/${error.summonerName}`} />}
+            {!isPending && data?.summonerName && <Navigate to={`./account/${region}/${data.summonerName}/ActiveGame`} />}
         </>
     )
 }

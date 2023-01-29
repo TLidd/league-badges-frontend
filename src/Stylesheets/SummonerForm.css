@@ -1,3 +1,8 @@
+.front-page{
+    max-width: 100%;
+    min-height: 100%;
+}
+
 .form-container{
     position: relative;
     top: 40%;
@@ -114,8 +119,8 @@ form .input-box select:focus{
 
 .loadingGif{
     position: absolute;
-    top: 140%;
-    transform: translate(-50%, -140%);
+    top: 85%;
+    transform: translate(-50%, -85%);
     
     width: 5rem;
 }
@@ -184,13 +189,8 @@ form .input-box select:hover{
     }
 
     .loadingGif{
-        top: 70%;
+        top: 65%;
         left: 50%;
-        transform: translate(-50%, -70%);
-    }
-
-    .no-summoner{
-        position: absolute;
-        background-color: red;
+        transform: translate(-50%, -65%);
     }
 }
