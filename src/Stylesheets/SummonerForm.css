@@ -7,7 +7,7 @@
 .form-background{
     margin: auto;
     
-    width: 90%;
+    width: min(90%, 60rem);
     aspect-ratio: 1/.60;
 
     border-radius: 50%;
@@ -22,11 +22,11 @@
     height: 115%;
     
     border: 1px solid var(--league-white-color);
+
+    pointer-events: none;
 }
 
 .form-container form label{
-    display: block;
-
     font-size: 2.5rem;
     color: var(--league-gold-color);
     text-shadow: 0 0 2px black, 0 0 2px black;
@@ -39,10 +39,11 @@
 
     box-sizing: border-box;
 
-    width: max(70%, 40ch);
+    width: min(80%, 45ch);
     
     margin-top: 1.5em;
     margin-bottom: 2em;
+    
 }
 
 .form-container form .input-box:focus-within{
@@ -119,143 +120,8 @@ form .input-box select:focus{
     width: 5rem;
 }
 
-/* .form-background{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 65%;
-    aspect-ratio: 1/.60;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    border: 2px solid var(--league-gold-color);
-    overflow: hidden;
-}
-
-.form-background img{
-    position: absolute;
-    object-fit: scale-down;
-    width: 115%;
-    height: 115%;
-    transform: translate(-44%, -5%);
-    pointer-events: none;
-}
-
-.form-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-container form .input-box{
-    display: flex;
-
-    background-color: rgba(255, 255, 255, 0.7);
-
-    box-sizing: border-box;
-
-    margin-top: 2em;
-    margin-bottom: 3em;
-}
-
-.form-container form .input-box:focus-within{
-    outline: 2px solid #165496ca;
-}
-
-.form-container form .input-box .text-input{
-    width: 85%;
-
-    font-size: 1.8rem;
-
-    box-sizing: border-box;
-
-    border: none;
-
-    text-align: center;
-
-    background: none;
-}
-
-.form-container form .input-box .text-input:focus{
-    outline: none;
-}
-
-form .input-box select{
-    width: 15%;
-
-    box-sizing: border-box;
-
-    text-align: center;
-
-    appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-
-    border: none;
-    border-left: 1px solid rgba(0, 0, 0, 0.428);
-
-    background-color: none;
-    background: none;
-
-    font-family: inherit;
-    font-size: 2rem;
-
-    transition-duration: 0.25s;
-}
-
 form .input-box select:hover{
     background-color: rgba(0, 0, 0, 0.25);
-}
-
-form .input-box select:focus{
-    outline: none;
-}
-
-.form-container::before{
-    content: '';
-    position: absolute;
-    width: 45em;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: #071b30ca;
-
-    z-index: -1;
-}
-
-.form-container form label{
-    display: block;
-
-    font-size: 4rem;
-    color: var(--league-gold-color);
-    text-shadow: 0 0 2px black, 0 0 2px black;
-
-    white-space: nowrap;
-}
-
-.form-container form .button{
-    position: relative;
-    top: 20%;
-    margin-left: auto;
-    margin-right: auto;
-
-    display: block;
-
-    padding: 0.5em 0.5em;
-
-    font-size: 1.6rem;
-    
-    background-color: #071b30e1;
-    color: var(--league-gold-color);
-
-    border-color: var(--league-gold-color);
-    border-radius: 15px;
-
-    transition-duration: 0.5s;
 }
 
 .form-container form .button:hover{
@@ -266,23 +132,65 @@ form .input-box select:focus{
     cursor: pointer;
 }
 
-.noSummoner{
-    margin-top: 10%;
-    color: rgba(255, 255, 255, 0.439);
+@media screen and (min-width: 65em){
+    .form-container{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .form-container .form-background{
+        width: max(60%, 80rem);
+    }
+
+    .form-container form{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: max(100%, );
+    }
+
+    .form-container form .input-box{
+        width: 55ch;
+    }
+
+    .form-container form label{
+        font-size: 3.5rem;
+    }
+
+    .form-container form .button{
+        font-size: 1.6rem;
+    }
+
+    .form-container form::before{
+        content: '';
+
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        width: 115%;
+        aspect-ratio: 1/1;
+
+        background-color: var(--league-blue-color);
+        opacity: 85%;
+        border-radius: 50%;
+
+    }
+
+    .loadingGif{
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+    }
+
+    .no-summoner{
+        position: absolute;
+        background-color: red;
+    }
 }
-
-.loadingGif{
-    position: absolute;
-    top: 125%;
-    width: 5rem;
-}  */
-
-/* @media screen and (max-width: 75em), screen and (orientation: landscape) and (max-height: 40em){
-    .form-background{
-        visibility: hidden;
-    }
-
-    .form-container::before{
-        visibility: hidden;
-    }
-} */
