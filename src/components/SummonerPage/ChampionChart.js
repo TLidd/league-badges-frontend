@@ -97,15 +97,15 @@ const ChampionChart = ({data}) => {
       }
 
     return (
-        <div className='chartContainer'>
-            <div className='chartToolTip' data-tooltip="The Graph points are based off of stats gained from Riot Games from bronze to challenger level. If the player is close to the edge of a category they are reaching challenger level stats (calculated as a percentage of challenger averages). The three most recently played champions are shown and each champion can be clicked on to display or disable their&nbsp;graph.">
+        <div className='chart-container'>
+            {/* <div className='chart-tooltip' data-tooltip="The Graph points are based off of stats gained from Riot Games from bronze to challenger level. If the player is close to the edge of a category they are reaching challenger level stats (calculated as a percentage of challenger averages). The three most recently played champions are shown and each champion can be clicked on to display or disable their&nbsp;graph.">
                 <div className='chartTool-icon'>?</div>
-            </div>
+            </div> */}
             {
             userData && 
             <div className='championChart'> <RadarChart chartData={userData} options={chartOptions} /> </div>
             }
-            <div className='championLegend'>
+            {/* <div className='championLegend'>
                 {
                     Object.values(data.champions).slice(0,champsToShow).map((champ, index) => {
                         return <img className='championIcon' key={champ.champData.champName} 
@@ -115,7 +115,7 @@ const ChampionChart = ({data}) => {
                         onClick={championClicked}/>
                     })
                 }
-            </div>
+            </div> */}
         </div>
     )
 }
