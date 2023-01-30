@@ -1,19 +1,99 @@
 .badge-box-container{
-    width: 80%;
-    height: 60%;
-    margin: auto;
-    
-    box-sizing: border-box;
-
-    position: relative;
-    top: 15%;
-    transform: translate(0, -15%);
+    margin-top: 1em;
+    width: 100%;
 }
 
-.badge-box-scroll-container{
+.badge-box-container .badge-box-scroll-container{
+    border-top: 3px solid var(--blue-div-border-color);
+    border-bottom: 3px solid var(--blue-div-border-color);
+    background-color: var(--background-blue-div-color);
+
+    padding: 2em 0;
+    overflow-x: auto;
+}
+
+.badge-box-container .badge-box-scroll-container .box-scroll{
+    gap: 2em;
     margin: auto;
-    width: 95%;
-    height: 80%;
+    padding: 0 1em;
+    width: fit-content;
+    justify-content: center;
+    display: flex;
+}
+
+.badge-box-container .badge-box-scroll-container .box-scroll .box-scroll-badge{
+    width: 10rem;
+    min-height: 10rem;
+}
+
+.badge-box-container .badge-box-legend{
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 50px;
+
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    justify-content: space-evenly;
+
+    border-radius: 50px;
+    border: 2px solid var(--blue-div-border-color);
+    background-color: var(--background-blue-div-color);
+
+    width: min(80%, 40rem);
+}
+
+.badge-box-container .badge-box-legend .legend-item{
+
+    width: 25%;
+    font-size: 1.6rem;
+
+    padding: 0.5em 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.25em;
+}
+
+.badge-box-container .badge-box-legend .legend-item .level-square{
+    border: 1px solid var(--league-gold-color);
+    border-radius: 5px;
+
+    width: max(25%, 2rem);
+    aspect-ratio: 1/1;
+}
+
+.legend-item .level-name{
+    font-size: 65%;
+    color: var(--league-white-color);
+    text-shadow: 0 0 1px black, 0 0 1px black;
+}
+
+.badge-box-description{
+    font-size: 1.6rem;
+    padding: 1em 1.5em;
+    color: rgb(177, 176, 176);
+    text-shadow: 0 0 1px black, 0 0 1px black;
+
+    background-color: #020e1e2e;
+}
+
+.badge-box-container .excellent{
+    color: var(--excellent-color);
+}
+
+.badge-box-container .great{
+    color: var(--great-color);
+}
+
+.badge-box-container .good{
+    color: var(--good-color);
+}
+
+/* .badge-box-scroll-container{
     overflow: hidden;
 
     border: 5px solid #020e1e69;
@@ -22,13 +102,11 @@
 }
 
 .box-scroll{
-    width: auto;
-    height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto
 }
 
@@ -55,10 +133,10 @@
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0 0 6px #bf860078;
     transition-duration: 0.5s;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
     background: #bf8600; 
 }
 
@@ -133,4 +211,4 @@
   
 .badge-box-description b{
     color: #bf8600;
-}
+} */

@@ -21,7 +21,7 @@ export let badgeNames = {
     visionScore: "Vision Score",
     damageDealtToTurrets: "Turret Damage",
     totalMinionsKilled: "Creep Score",
-    totalDamageDealtToChampions: "Champion Damage",
+    totalDamageDealtToChampions: "Champ Damage",
     totalDamageTaken: "Damage Taken",
     wardsKilled: "Wards Destroyed",
     goldEarned: "Gold Earned",

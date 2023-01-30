@@ -9,7 +9,12 @@ import RankedOverview from "./RankedOverview"
 
 const fetchPlayerData = async (name, region) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}/${region}`);
-    return res.json();
+
+    if(res.ok){
+      return res.json();
+    }else{
+      return {status_code: 404}
+    }
 }
 
 const SummonerPage = () => {
@@ -26,58 +31,31 @@ const SummonerPage = () => {
     return <img className="loading-gif" src={require("../../assets/loading2.gif")} alt="loading..." />
   }
 
-  return (
-    <div style={{height: "100%"}}>
-      <NavIcon/>
-      {
-        data &&
-        <div style={{height: "100%"}}>
-
-          <div className="player-name">
-            {data?.SummonerName}
-          </div>
-
-          <div className="player-rank-piece">
-                <RankImage tier={data?.tier} rank={data?.rank}/>
-          </div>
-
-          <div className="player-container">
-
-            <div className="player-piece">
-              <BadgeBox badges={data?.badges}/>
-            </div>
-
-            <div className="player-piece" style={{"border" : "none"}}>
+  //if summoner does not exist
+  if(data?.status_code === 404){
+    return <div className="no-summoner">
               <div>
-                <button className="activeGameButton" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
+                {`${name} does not exist.`}
               </div>
-              {
-                data && 
-                <div style={{"marginTop" : "25%"}}>
-                  <ChampionChart data={data}/>
-                </div>
-              }
+              <button className="button" onClick={() => navigate(`/`)}>New Search</button>
             </div>
-            {
-              data &&
-              <div className="player-piece">
-                <RankedOverview wins={data?.matchHistory.wins} losses={data?.matchHistory.losses} matchHistory={data?.matchHistory.games}/>
-              </div>
-            }
-          </div>
-        </div>
-      }
-      
-      { //if summoner does not exist send them to main page.
-        !data && !isLoading &&
-        <div className="no-summoner">
-          <div>
-            {`${name} does not exist.`}
-          </div>
-          <button className="button" onClick={() => navigate(`/`)}>New Search</button>
-        </div>
-      }
+  }
 
+  return (
+    <div>
+      {/* <NavIcon/> */}
+
+      <div className="player-name">
+        {data?.SummonerName}
+      </div>
+
+      <div className="player-rank-piece">
+        <RankImage tier={data?.tier} rank={data?.rank}/>
+      </div>
+
+      <div className="player-container">
+          <BadgeBox badges={data?.badges}/>
+      </div>
     </div>
   )
 }

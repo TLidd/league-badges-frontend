@@ -2,6 +2,12 @@ html{
   --league-gold-color: #bf8600;
   --league-blue-color: #071b30;
   --league-white-color: rgb(200, 200, 200);
+  --background-blue-div-color: #020e1e3c;
+  --blue-div-border-color: #020e1e;
+
+  --excellent-color: rgb(60, 7, 68);
+  --great-color: rgb(2, 106, 106);
+  --good-color: rgba(64, 73, 70, 0.512);
   
   font-family: 'Kanit', sans-serif;
   font-size: 62.5%;
@@ -9,6 +15,7 @@ html{
 
 .App {
   overflow-y: auto;
+  overflow-x: hidden;
   text-align: center;
   height: 100vh;
 }

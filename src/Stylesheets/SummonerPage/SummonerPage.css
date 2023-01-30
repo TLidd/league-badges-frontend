@@ -1,17 +1,29 @@
 .player-name{
-    font-size: 200%;
+    font-size: 3rem;
 
-    position: absolute;
-    top: 20%;
-    transform: translate(-50%, -20%);
+    color: var(--league-gold-color);
+    text-shadow: 0 0 3px black, 0 0 3px black;
 
-    display: inline-block;
+    margin-top: 1em;
 
-    color: #bf8600;
-    text-shadow: 0 0 6px black, 0 0 6px black;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
 }
 
-.badgeBar{
+.player-rank-piece{
+    width: 8rem;
+
+    margin: auto;
+    margin-top: 1em;
+}
+
+.player-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .badgeBar{
     width: 70%;
     display: flex;
     align-items: center;
@@ -84,4 +96,4 @@
     transform: translate(-50%);
 
     z-index: -1;
-}
+} */

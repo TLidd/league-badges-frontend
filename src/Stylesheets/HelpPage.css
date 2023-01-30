@@ -21,8 +21,8 @@ h1{
 }
 
 .help-container .help-item{
-    border: 3px solid #020e1e;
-    background-color: #020e1e3c;
+    border: 3px solid var(--blue-div-border-color);
+    background-color: var(--background-blue-div-color);
     border-left: none;
     border-right: none;
 
