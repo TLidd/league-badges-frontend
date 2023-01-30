@@ -74,11 +74,15 @@
 
 .badge-box-description{
     font-size: 1.6rem;
+    margin: auto;
+    margin-top: 1em;
     padding: 1em 1.5em;
     color: rgb(177, 176, 176);
     text-shadow: 0 0 1px black, 0 0 1px black;
 
     background-color: #020e1e2e;
+
+    max-width: 45ch;
 }
 
 .badge-box-container .excellent{

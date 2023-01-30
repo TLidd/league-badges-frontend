@@ -1,25 +1,24 @@
 .overview-container{
-    margin: auto;
-    margin-top: 10%;
+    padding-top: 1em;
+    border-top: 2px solid var(--blue-div-border-color);
+    font-size: 2rem;
+    color: var(--league-white-color);
+    text-shadow: 0 0 2px black, 0 0 2px black;
 
-    width: 80%;
-
-    box-sizing: border-box;
-
-    color: rgba(255, 255, 255, 0.689);
-    text-shadow: 0 0 3px black, 0 0 3px black;
-
+    width: 100%;
 }
 
 .win-loss{
-    margin-top: 8%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin: auto;
+    margin-top: 1em;
 
-    width: 100%;
+    padding: 0.25em 0;
 
-    border: 2px solid #020e1e69;
-    background-color: #020e1e25;
+    width: 80%;
+    max-width: 35ch;
+
+    border: 2px solid var(--blue-div-border-color);
+    background-color: var(--background-blue-div-color);
     border-radius: 25px;
 }
 
@@ -40,7 +39,15 @@
     color: white;
 }
 
-.recent-games-container{
+.recent-games{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1em;
+}
+
+/* .recent-games-container{
     margin: auto;
     height: 55%;
     width: 85%;
@@ -68,4 +75,4 @@
 
 .recent-game:last-of-type{
     margin-bottom: 2.5%;
-}
+} */

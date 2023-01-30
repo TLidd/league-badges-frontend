@@ -10,19 +10,19 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
   }
 
   return (
-    <div className={`game-container ${win ? "won-game" : "lost-game"}`} style={moreGameInfo ? {"--ranked-game-display-height": "50%"} : {}} >
+    <div className={`game-container ${win ? "won-game" : "lost-game"}`} >
       <div className="ranked-game">
         <div className="champ-sums-container">
           <div className="champ-img-wrapper">
             <img src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champion}.png`} alt=""/>
           </div>
           <div className="spells-wrapper">
-            <img src= {`http://ddragon.leagueoflegends.com/cdn/8.11.1/img/spell/Summoner${spell1}.png`} alt=""/>
-            <img src= {`http://ddragon.leagueoflegends.com/cdn/8.11.1/img/spell/Summoner${spell2}.png`} alt=""/>
+            <div className="spell"><img src= {`http://ddragon.leagueoflegends.com/cdn/8.11.1/img/spell/Summoner${spell1}.png`} alt=""/></div>
+            <div className="spell"><img src= {`http://ddragon.leagueoflegends.com/cdn/8.11.1/img/spell/Summoner${spell2}.png`} alt=""/></div>
           </div>
         </div>
-        <div className="kda">{`${kills}/${deaths}/${assists}`}</div>
-        <div className="player-items">
+        {/* <div className="kda">{`${kills}/${deaths}/${assists}`}</div> */}
+        {/* <div className="player-items">
         {
           playerItems.map((itemId, index) => {
               if(index === 6) return null;
@@ -33,12 +33,12 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
                       </div>
           })
         }
-        </div>
-        <button onClick={showMoreInfo} className="ranked-game-button" style={moreGameInfo ? {transform: "rotate(-3.142rad)"} : {}}>
+        </div> */}
+        {/* <button onClick={showMoreInfo} className="ranked-game-button" style={moreGameInfo ? {transform: "rotate(-3.142rad)"} : {}}>
           ˅
-        </button>
+        </button> */}
       </div>
-      <div className={`more-info-box ${win ? "won-game" : "lost-game"}`}>
+      {/* <div className={`more-info-box ${win ? "won-game" : "lost-game"}`}>
         {
           Object.keys(gameStats).map(key => 
           <div className="more-info-stat" key={`${key} + ${gameStats[key]}`}>
@@ -46,7 +46,7 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
             <span className="stat">{`\u00A0${gameStats[key]}`}</span>
           </div>)
         }
-      </div>
+      </div> */}
     </div>
     
   )

@@ -20,7 +20,8 @@
 }
 
 .player-rank-piece{
-    width: 8rem;
+    width: 25%;
+    max-width: 15rem;
 
     margin: auto;
     margin-top: 1em;
