@@ -54,9 +54,15 @@ const SummonerPage = () => {
       </div>
 
       <div className="player-container">
+        <div className="player-section">
           <BadgeBox badges={data?.badges}/>
+        </div>
+        {/* <div className="player-section">
           <ChampionChart data={data}/>
+        </div>
+        <div className="player-section">
           <RankedOverview wins={data?.matchHistory.wins} losses={data?.matchHistory.losses} matchHistory={data?.matchHistory.games}/>
+        </div> */}
       </div>
     </div>
   )
