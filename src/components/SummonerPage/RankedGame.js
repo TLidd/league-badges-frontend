@@ -40,7 +40,7 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
       </div>
       <div className={`more-info-box ${win ? "won-game" : "lost-game"}`} 
       style={moreGameInfo ? {maxHeight: "500px", padding: "1em 0", borderColor: win ? "green" : "red"} : 
-      {border: "0px solid", transition: "border 0s 1s ease-in, max-height 1s ease-in-out, padding 1s ease-in-out"}}>
+      {border: "0px solid", transition: "border 0s 1s linear, max-height 1s ease-in-out, padding 1s ease-in-out"}}>
         {
           Object.keys(gameStats).map(key => 
           <div className="more-info-stat" key={`${key} + ${gameStats[key]}`}>

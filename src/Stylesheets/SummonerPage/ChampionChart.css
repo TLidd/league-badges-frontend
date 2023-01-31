@@ -2,10 +2,6 @@
     display: none;
 }
 
-.chart-tooltip{
-
-}
-
 .chartToolTip{
     --tooltip-color: rgba(0, 255, 255, 0.214);
     --tooltip-hover-color: rgba(0, 255, 255, 0.658);
@@ -20,7 +16,7 @@
     border: 2px solid var(--tooltip-color);  
     border-radius: 50%;
 
-    transition: 0.1s border-color ease-out
+    transition: 0.1s border-color ease-out;
 
 }
 
