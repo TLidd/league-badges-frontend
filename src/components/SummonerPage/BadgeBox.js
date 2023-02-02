@@ -10,9 +10,9 @@ const BadgeBox = ({badges}) => {
     //insert the values for the badges in the badge box and order it by highest badges
     Object.keys(badgeNames).map((key, index) => {
         if(key in badges){
-            badgeValues[index] = [key, badges[key]];
+            return badgeValues[index] = [key, badges[key]];
         }else{
-            badgeValues[index] = [key, -1];
+            return badgeValues[index] = [key, -1];
         }
     })
 
