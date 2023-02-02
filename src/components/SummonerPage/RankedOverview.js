@@ -4,7 +4,7 @@ import RankedGame from "./RankedGame"
 const RankedOverview = ({wins, losses, matchHistory}) => {
   return (
   <div className="overview-container">
-    <span style={{textDecoration: "underline"}}>Ranked Overview</span>
+    <span className="ranked-overview-text">Ranked Overview</span>
     <div className="win-loss">
       <div className="win-text">Wins</div>
       <div className="lose-text">Losses</div>

@@ -42,8 +42,8 @@ const SummonerPage = () => {
   }
 
   return (
-    <div>
-      {/* <NavIcon/> */}
+    <div className="summoner-page">
+      <NavIcon/>
 
       <div className="player-name">
         {data?.SummonerName}
@@ -53,16 +53,20 @@ const SummonerPage = () => {
         <RankImage tier={data?.tier} rank={data?.rank}/>
       </div>
 
+      <div>
+        <button className="active-game-button" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
+      </div>
+
       <div className="player-container">
-        <div className="player-section">
-          <BadgeBox badges={data?.badges}/>
-        </div>
-        {/* <div className="player-section">
+      <div className="player-section">
           <ChampionChart data={data}/>
         </div>
         <div className="player-section">
           <RankedOverview wins={data?.matchHistory.wins} losses={data?.matchHistory.losses} matchHistory={data?.matchHistory.games}/>
-        </div> */}
+        </div>
+        <div className="player-section">
+          <BadgeBox badges={data?.badges}/>
+        </div>
       </div>
     </div>
   )

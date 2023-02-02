@@ -97,17 +97,27 @@
     color: var(--good-color);
 }
 
-@media screen and (min-width: 65em){
+@media screen and (min-width: 75em){
     .badge-box-container .badge-box-scroll-container{
         border: 3px solid var(--blue-div-border-color);
         border-radius: 50px;
         background-color: var(--background-blue-div-color);
+        margin: auto;
+        max-width: 450px;
     }
 
     .badge-box-container .badge-box-scroll-container .box-scroll{
         flex-wrap: wrap;
         max-height: 340px;
         overflow-y: auto;
+    }
+
+    .legend-item .level-name{
+        font-size: 2rem;
+    }
+
+    .badge-box-description{
+        text-shadow: 0 0 2px black, 0 0 2px black;
     }
 
     ::-webkit-scrollbar {

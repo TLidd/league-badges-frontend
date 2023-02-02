@@ -2,7 +2,7 @@
     display: none;
 }
 
-.chartToolTip{
+.chart-tooltip{
     --tooltip-color: rgba(0, 255, 255, 0.214);
     --tooltip-hover-color: rgba(0, 255, 255, 0.658);
 
@@ -20,25 +20,25 @@
 
 }
 
-.chartToolTip .chartTool-icon{
+.chart-tooltip .chartTool-icon{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 
     color: var(--tooltip-color);
 
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 
     transition: 0.1s color ease-out;
 
     pointer-events: none;
 }
 
-.chartToolTip:hover{
+.chart-tooltip:hover{
     border-color: var(--tooltip-hover-color);
 }
 
-.chartToolTip::after{
+.chart-tooltip::after{
     content: attr(data-tooltip);
 
     visibility: hidden;
@@ -49,7 +49,7 @@
     top: 120%;
 
     white-space: wrap;
-    width: 25rem;
+    width: 40ch;
 
     padding: 1rem 2rem;
     background-color: #031328;
@@ -57,7 +57,7 @@
     border: 2px solid rgba(0, 0, 0, 0.666);
     border-radius: 10px;
 
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: rgba(255, 255, 255, 0.557);
     text-shadow: 0 0 2px black, 0 0 2px black;
 
@@ -66,119 +66,35 @@
     pointer-events: none;
 }
 
-.chartToolTip:hover::after{
+.chart-tooltip:hover::after{
     visibility: visible;
     opacity: 100%;
     top: 150%;
 }
 
-.chartToolTip:hover .chartTool-icon{
+.chart-tooltip:hover .chartTool-icon{
     color: var(--tooltip-hover-color);
 }
 
-.championChart{
-    width: 400px;
-}
-/* .championChart{
-    width: 500px;
-    height: 500px;
-    margin: auto;
-    margin-top: 10%;
+.champion-chart{
+    min-width: 350px;
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 
-.championLegend{
-    position: absolute;
+.champion-legend{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
-    left: 0;
-    width: 80%;
-    top: 80%;
 }
 
-.championIcon{
+.champion-legend img{
     border-radius: 50%;
-    width: 20%;
+    max-width: 20%;
 }
 
-.chartContainer{
-    position: relative;
+@media screen and (min-width: 75em){
+    .chart-container{
+        display: block;
+    }
 }
-
-.chartToolTip{
-    --tooltip-color: rgba(0, 255, 255, 0.214);
-    --tooltip-hover-color: rgba(0, 255, 255, 0.658);
-
-    position: absolute;
-    left: 10%;
-    top: 10%;
-
-    width: 7%;
-    aspect-ratio: 1/1;
-
-    border: 2px solid var(--tooltip-color);  
-    border-radius: 50%;
-
-    transition: 0.1s border-color ease-out
-
-}
-
-.chartToolTip .chartTool-icon{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    color: var(--tooltip-color);
-
-    font-size: 1.5rem;
-
-    transition: 0.1s color ease-out;
-
-    pointer-events: none;
-}
-
-.chartToolTip:hover{
-    border-color: var(--tooltip-hover-color);
-}
-
-.chartToolTip::after{
-    content: attr(data-tooltip);
-
-    visibility: hidden;
-    opacity: 0%;
-
-    position: absolute;
-    left: 0;
-    top: 120%;
-
-    white-space: wrap;
-    width: 25rem;
-
-    padding: 1rem 2rem;
-    background-color: #031328;
-
-    border: 2px solid rgba(0, 0, 0, 0.666);
-    border-radius: 10px;
-
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.557);
-    text-shadow: 0 0 2px black, 0 0 2px black;
-
-    transition-duration: 0.5s;
-
-    pointer-events: none;
-}
-
-.chartToolTip:hover::after{
-    visibility: visible;
-    opacity: 100%;
-    top: 150%;
-}
-
-.chartToolTip:hover .chartTool-icon{
-    color: var(--tooltip-hover-color);
-} */
