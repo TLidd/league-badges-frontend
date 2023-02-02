@@ -44,7 +44,7 @@
 
     box-sizing: border-box;
 
-    width: min(80%, 45ch);
+    width: min(90%, 45ch);
     
     margin-top: 1.5em;
     margin-bottom: 2em;
@@ -57,7 +57,7 @@
 
 .form-container form .input-box .text-input{
     display: inline-block;
-    width: 85%;
+    width: 80%;
 
     font-size: 2rem;
 
@@ -75,7 +75,7 @@
 }
 
 .form-container form .input-box select{
-    width: 15%;
+    width: 20%;
 
     text-align: center;
 
