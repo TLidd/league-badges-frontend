@@ -1,70 +1,98 @@
-.navicon-link{
-    position: absolute;
-    left: 6rem;
-    top: 3rem;
-    color: #134f8f;
-
-    transition-duration: 0.3s;
-
-    font-size: 3rem;
-    text-decoration: none !important;
-
-    visibility: hidden;
+.navigation{
+    --nav-color: #134f8f;
 }
 
-.navicon-link:hover{
+.navicon-link{ 
+    display: none;
+}
+
+.navicon-link-mobile{
+    font-size: 1.4rem;
+    color: var(--nav-color);
+
+    text-decoration: none !important;
+
+    padding: 0.25em 0.5em;
+    border-radius: 15px;
+
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border: 1px solid var(--nav-color);
+}
+
+.navicon-link-mobile:hover{
     border-color: var(--league-gold-color);
     color: var(--league-gold-color);
     cursor: pointer;
 }
 
-.navicon-link::before{
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 4.5rem;
-    aspect-ratio: 1/1;
-
-    border-radius: 50%;
-    border: 1px solid #134f8f;
-
-    transition-duration: inherit;
-}
-
-.navicon-link:hover::before{
-    border-color: var(--league-gold-color);
-}
-
-.navicon-link::after{
-    content: attr(data-tooltip);
-    display: block;
-    font-size: 2.5rem;
-    color: var(--league-gold-color);
-
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    visibility: hidden;
-    opacity: 0;
-
-    pointer-events: none;
-
-    transition-duration: inherit;
-}
-
-.navicon-link:hover::after{
-    visibility: visible;
-    opacity: 100%;
-}
-
 @media screen and (min-width: 65em) {
+    .navicon-link-mobile{
+        display: none;
+    }
+
     .navicon-link{
+        display: block;
+        position: absolute;
+        left: 6rem;
+        top: 3rem;
+        
+        color: var(--nav-color);
+    
+        transition-duration: 0.3s;
+    
+        font-size: 3rem;
+        text-decoration: none !important;
+    }
+    
+    .navicon-link:hover{
+        border-color: var(--league-gold-color);
+        color: var(--league-gold-color);
+        cursor: pointer;
+    }
+    
+    .navicon-link::before{
+        content: "";
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        width: 4.5rem;
+        aspect-ratio: 1/1;
+    
+        border-radius: 50%;
+        border: 1px solid #134f8f;
+    
+        transition-duration: inherit;
+    }
+    
+    .navicon-link:hover::before{
+        border-color: var(--league-gold-color);
+    }
+    
+    .navicon-link::after{
+        content: attr(data-tooltip);
+        display: block;
+        font-size: 2.5rem;
+        color: var(--league-gold-color);
+    
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        visibility: hidden;
+        opacity: 0;
+    
+        pointer-events: none;
+    
+        transition-duration: inherit;
+    }
+    
+    .navicon-link:hover::after{
         visibility: visible;
+        opacity: 100%;
     }
 }

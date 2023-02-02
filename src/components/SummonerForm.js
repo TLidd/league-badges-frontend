@@ -2,6 +2,7 @@ import {useRef, useState} from "react";
 import {Navigate} from "react-router-dom"
 import "../Stylesheets/SummonerForm.css"
 import useGetFetch from "./useGetFetch";
+import NavIcon from "./GeneralComponents/NavIcon";
 
 const SummonerForm = () => {
     //useRef allows for a ref object of the form value below
@@ -32,7 +33,7 @@ const SummonerForm = () => {
     
     return (
         <>
-            {/* <NavIcon icon={'?'} description={"Help"} path={'./Help'} /> */}
+            <NavIcon icon={'?'} description={"Help"} path={'./Help'} />
             <div className="form-container">
                 <div className="form-background">
                     <img src={require("../assets/mordekaiser.gif")} alt=""/>
