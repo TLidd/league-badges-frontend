@@ -1,23 +1,27 @@
 .loading-container {
     position: relative; 
-    width: 100%; 
     top: 45%; 
     transform: translate(0, -50%);
+
+    width: 100%;
+    text-align: center;
+
 }
 
 .loading-container img{
-    position: relative;
-    left: 0%;
+    width: 80%;
 }
 
 .loading-bar {
     margin-left: auto; 
     margin-right: auto; 
+
     position: absolute; 
     left: 50%; 
     top: 75%; 
     transform: translate(-50%); 
-    border: 3px solid #bf8600;
+
+    border: 3px solid var(--league-gold-color);
     border-radius: .75em;
     width: 18%; 
     height: 10%;
@@ -25,15 +29,20 @@
 
 .loading-bar::before{
     content: '';
+
     position: absolute;
     left: 2%;
     top: 25%;
     bottom: 25%;
+
     width: calc(var(--width, 0) * 1%);
     height: 50%;
     min-width: 5%;
     max-width: calc(100% - 4%);
-    background-color: #bf8600;
+
+    background-color: var(--league-gold-color);
+
     border-radius: .75em;
+    
     transition-duration: 1s;
 }

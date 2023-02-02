@@ -6,6 +6,7 @@ import NavIcon from "../GeneralComponents/NavIcon"
 import BadgeBox from "./BadgeBox"
 import RankImage from "../GeneralComponents/RankImage"
 import RankedOverview from "./RankedOverview"
+import Loading from "../GeneralComponents/Loading"
 
 const fetchPlayerData = async (name, region) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}/${region}`);
@@ -28,7 +29,7 @@ const SummonerPage = () => {
   );
 
   if(isLoading){
-    return <img className="loading-gif" src={require("../../assets/loading2.gif")} alt="loading..." />
+    return <Loading loadingBarVisible = {false}/>
   }
 
   //if summoner does not exist

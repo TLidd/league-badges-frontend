@@ -46,7 +46,7 @@ const SummonerForm = () => {
                             <option value={"NA"}>NA</option>
                             <option value={"EUW"}>EUW</option>
                             <option value={"EUNE"}>EUNE</option>
-                            <option value={"OC"}>OC</option>
+                            <option value={"OC"}>OCE</option>
                             <option value={"KR"}>KR</option>
                             <option value={"JP"}>JP</option>
                             <option value={"BR"}>BR</option>

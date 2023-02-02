@@ -16,6 +16,8 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
   let nameMatch = name.toUpperCase() === summonerName.toUpperCase();
   let highlight = nameMatch ? "highlightSummoner" : "lobbyParticipant";
 
+  if(sumChamp == 'FiddleSticks') sumChamp = 'Fiddlesticks';
+
   return (
     <div className="card">
       <div className="namePlate">

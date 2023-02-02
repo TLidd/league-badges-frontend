@@ -9,6 +9,8 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
     else setMoreGameInfo(true);
   }
 
+  if(champion == 'FiddleSticks') champion = 'Fiddlesticks';
+
   return (
     <div className='game-container' >
       <div className={`ranked-game ${win ? "won-game" : "lost-game"}`}>

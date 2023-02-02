@@ -96,6 +96,7 @@ const ChampionChart = ({data}) => {
         setShownChampions(newChampsShow);
       }
 
+
     return (
         <div className='chart-container'>
             <div className='chart-tooltip' data-tooltip="The Graph points are based off of stats gained from Riot Games from bronze to challenger level. If the player is close to the edge of a category they are reaching challenger level stats (calculated as a percentage of challenger averages). The three most recently played champions are shown and each champion can be clicked on to display or disable their&nbsp;graph.">
@@ -110,7 +111,7 @@ const ChampionChart = ({data}) => {
                 Object.values(data.champions).slice(0,champsToShow).map((champ, index) => {
                     return <img key={champ.champData.champName} 
                     style={{border: shownChampions.includes(champ.champData.champName) ? '4px solid ' + graphColors[index].slice(0,7) : '4px solid #FFFFFF00'}} 
-                    src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champ.champData.champName}.png`}
+                    src={champ.champData.champName == 'FiddleSticks' ? 'http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/Fiddlesticks.png' : `http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champ.champData.champName}.png`}
                     name={champ.champData.champName} alt={champ.champData.champName}
                     onClick={championClicked}/>
                 })
