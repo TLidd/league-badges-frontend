@@ -7,7 +7,7 @@ import BadgeBox from "./BadgeBox"
 import RankImage from "../GeneralComponents/RankImage"
 import RankedOverview from "./RankedOverview"
 import Loading from "../GeneralComponents/Loading"
-import ActiveGame from "../ActiveGame"
+import VerifyPlayer from "../GeneralComponents/VerifyPlayer"
 
 const fetchPlayerData = async (name, region) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}/${region}`);
@@ -35,7 +35,7 @@ const SummonerPage = () => {
 
   //if summoner does not exist
   if(data?.status_code === 404){
-    return <ActiveGame searchedName={name} actualName={null}/>
+    return <VerifyPlayer searchedName={name} actualName={null}/>
   }
 
   return (

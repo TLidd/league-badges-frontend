@@ -1,8 +1,8 @@
 //checks if summoner is in an active game
 import { useNavigate } from "react-router-dom"
-import "../Stylesheets/ActiveGame.css"
+import "../../Stylesheets/GeneralStyles/VerifyPlayer.css"
 
-const ActiveGame = ({searchedName, actualName, region}) => {
+const VerifyPlayer = ({searchedName, actualName, region}) => {
     const navigate = useNavigate();
 
     const SummonerPage = (e) => {
@@ -38,4 +38,4 @@ const ActiveGame = ({searchedName, actualName, region}) => {
     )
 }
 
-export default ActiveGame
+export default VerifyPlayer

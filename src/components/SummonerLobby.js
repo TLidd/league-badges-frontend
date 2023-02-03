@@ -4,7 +4,7 @@ import {useQueries} from "@tanstack/react-query"
 import SummonerCard from "./SummonerCard"
 import "../Stylesheets/SummonerLobby.css"
 import useGetFetch from "./useGetFetch";
-import ActiveGame from "./ActiveGame";
+import VerifyPlayer from "./GeneralComponents/VerifyPlayer";
 import NavIcon from "./GeneralComponents/NavIcon";
 import Loading from "./GeneralComponents/Loading";
 
@@ -104,7 +104,7 @@ const SummonerLobby = () => {
             </div>
         
         }
-        {lobby.error && team1 !== [] && team2 !== [] && <ActiveGame searchedName={name} actualName={lobby.error?.summonerName} region={region}/>}
+        {lobby.error && team1 !== [] && team2 !== [] && <VerifyPlayer searchedName={name} actualName={lobby.error?.summonerName} region={region}/>}
 
     </div>
     
