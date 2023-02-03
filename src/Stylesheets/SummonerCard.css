@@ -1,4 +1,124 @@
-.card {
+.card{
+    width: 90%;
+    max-width: 250px;
+
+    border: 2px solid var(--league-gold-color);
+
+    border-radius: 15px;
+}
+
+.blue-team{
+    background-color: #020e1e7c;
+}
+
+.red-team{
+    background-color: #210d0d7c;
+}
+
+.card .namePlate{
+    height: 5.5rem;
+    width: 100%;
+    border-bottom: 2px solid var(--league-gold-color);
+
+    padding: 0.5em 0em;
+
+    border-radius: 15px;
+
+    position: relative;
+}
+
+.card .namePlate .name{
+    font-size: 2rem;
+
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+
+    white-space: nowrap;
+
+    transition-duration: 0.25s;
+
+    color: var(--league-white-color);
+    text-shadow: 0 0 2px black, 0 0 2px black;
+
+    z-index: 1;
+}
+
+.card .namePlate .name:hover{
+    font-size: 2.1rem;
+    color: var(--league-gold-color);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.card .namePlate .name.highlight{
+    color: var(--league-gold-color);
+}
+
+.card .namePlate .card-rank{
+    width: 25%;
+    position: absolute;
+    left: -5%;
+    top: -50%;
+}
+
+.card .namePlate .namePlate-img{
+    width: 25%;
+
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+    border: 2px solid var(--league-gold-color);
+    
+}
+
+.card .played-role{
+    padding: 0.25em;
+    margin: 5em auto;
+    margin-bottom: 0px;
+
+    width: fit-content;
+
+    border: 1px solid var(--league-gold-color);
+    border-radius: 15px;
+}
+
+.card .played-role .role-text{
+    width: 100%;
+    font-size: 1.2rem;
+
+    border-bottom: 1px solid var(--league-gold-color);
+    color: var(--league-gold-color);
+}
+
+.card .played-role img{
+    width: 40%;
+}
+
+.card .card-badge-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
+
+    width: 80%;
+
+    margin: 1em auto;
+}
+
+.card .card-badge-container .card-badge{
+    margin: auto;
+    width: 85%;
+    aspect-ratio: 1/1;
+}
+
+/* .card {
     height: 100%;
     width: 100%;
     display: flex;
@@ -119,4 +239,4 @@ a:link {
     bottom: 20%;
 
     z-index: 0;
-}
+} */

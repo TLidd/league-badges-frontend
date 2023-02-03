@@ -1,5 +1,5 @@
 .text{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--league-gold-color);
 }
 
@@ -25,4 +25,14 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
+}
+
+@media screen and (min-width: 65em){
+    .text{
+        font-size: 4rem;
+    }
+
+    .button{
+        font-size: 2.5rem;
+    }
 }

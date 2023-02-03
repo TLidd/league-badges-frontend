@@ -1,35 +1,16 @@
 .lobby{
-    padding-top: 1%;
-    margin-right: auto;
-    margin-left: auto;
-    width: 90%;
-    height: 90%;
 }
 
-.flexbox-container{
-    height: 50%;
+.team-container{
+    margin: 4em auto;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.flexbox-item{
-    width: 15%;
-    border: 3px solid #bf8600;
-    border-radius: 15px;
-    height: 90%;
-    background-color: #1a19197c;
-}
-
-.blue-team{
-    background-color: #020e1e7c;
-}
-
-.red-team{
-    background-color: #210d0d7c;
+    flex-wrap: wrap;
+    gap: 8em;
+    justify-content: center;
 }
 
 .versusTag{
-    color: #bf8600;
-    text-shadow: 0 0 4px black, 0 0 4px black;
+    font-size: 3rem;
+    color: var(--league-gold-color);
+    text-shadow: 0 0 3px black, 0 0 3px black;
 }

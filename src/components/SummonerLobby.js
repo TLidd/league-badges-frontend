@@ -75,29 +75,25 @@ const SummonerLobby = () => {
     }
 
   return (
-    <div style={{height: "100%"}}>
+    <div>
         <NavIcon/>
         {
             team1.length !== 0 && team2.length !== 0 &&
             <div className="lobby">
-                <div className="flexbox-container">
+                <div className="team-container">
                     {
                     team1.map(player => {
-                        return  <div className="flexbox-item blue-team" key={player.data.SummonerName}>
-                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} 
-                                    sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true} sumTier={player.data.tier} sumRank={player.data.rank}/>
-                                </div>
+                        return  <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} key={player.data.SummonerName}
+                                    sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true} sumTier={player.data.tier} sumRank={player.data.rank} team={"blue"}/>
                     })
                     }
                 </div>
                 <b className="versusTag">VERSUS</b>
-                <div className="flexbox-container">
+                <div className="team-container">
                     {
                     team2.map(player => {
-                        return  <div className="flexbox-item red-team" key={player.data.SummonerName}>
-                                    <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} 
-                                    sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true} sumTier={player.data.tier} sumRank={player.data.rank}/>
-                                </div>
+                        return  <SummonerCard sumName= {player.data.SummonerName} sumChamp= {playerChamp[player.data.SummonerName]} key={player.data.SummonerName}
+                                    sumRole= {player.data.Role} sumBadges= {player.data.badges} activeGame= {true} sumTier={player.data.tier} sumRank={player.data.rank} team={"red"}/>
                     })
                     }
                 </div>
