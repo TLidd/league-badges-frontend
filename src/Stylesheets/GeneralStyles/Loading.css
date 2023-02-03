@@ -1,15 +1,17 @@
 .loading-container {
-    position: relative; 
-    top: 45%; 
-    transform: translate(0, -50%);
+    position: absolute; 
+    top: 45%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
 
     width: 100%;
+    max-width: 400px;
     text-align: center;
-
 }
 
 .loading-container img{
     width: 80%;
+    margin: auto;
 }
 
 .loading-bar {
@@ -22,27 +24,28 @@
     transform: translate(-50%); 
 
     border: 3px solid var(--league-gold-color);
-    border-radius: .75em;
-    width: 18%; 
+    border-radius: 25px;
+
+    width: 90%;
     height: 10%;
+    min-height: 20px;
 }
 
 .loading-bar::before{
     content: '';
-
+    display: block;
     position: absolute;
+    height: 60%;
+    top: 50%;
     left: 2%;
-    top: 25%;
-    bottom: 25%;
+    transform: translateY(-50%);
 
-    width: calc(var(--width, 0) * 1%);
-    height: 50%;
+    width: calc(var(--load-percent, 0) * 1%);
+    border-radius: 25px;
     min-width: 5%;
-    max-width: calc(100% - 4%);
+    max-width: 96%;
 
     background-color: var(--league-gold-color);
-
-    border-radius: .75em;
     
     transition-duration: 1s;
 }

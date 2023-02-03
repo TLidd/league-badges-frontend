@@ -1,27 +1,27 @@
 .text{
-    font-size: 150%;
-    color: #bf8600;
+    font-size: 3rem;
+    color: var(--league-gold-color);
 }
 
 .button{
-    font-size: 60%;
-    margin-top: 3%;
-    padding: 5px;
+    font-size: 1.6rem;
+    padding: 0.5em 0.5em;
     border-radius: 10px;
     background-color: #00000023;
-    color: #bf8600;
+    color: var(--league-gold-color);
     transition-duration: 0.5s;
-    border-color: #bf8600;
-    font-weight: bold;
+    border-color: var(--league-gold-color);
 }
 
 .button:hover{
-    background-color: #bf8600;
+    background-color: var(--league-gold-color);
     color: black;
     cursor: pointer;
 }
 
 .center{
-    display: inline-block;
-    margin-top: 15%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
 }

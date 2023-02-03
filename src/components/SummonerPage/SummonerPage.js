@@ -7,6 +7,7 @@ import BadgeBox from "./BadgeBox"
 import RankImage from "../GeneralComponents/RankImage"
 import RankedOverview from "./RankedOverview"
 import Loading from "../GeneralComponents/Loading"
+import ActiveGame from "../ActiveGame"
 
 const fetchPlayerData = async (name, region) => {
     const res = await fetch(`${process.env.REACT_APP_ROUTE_PATH}/summonerData/${name}/${region}`);
@@ -34,12 +35,7 @@ const SummonerPage = () => {
 
   //if summoner does not exist
   if(data?.status_code === 404){
-    return <div className="no-summoner">
-              <div>
-                {`${name} does not exist.`}
-              </div>
-              <button className="button" onClick={() => navigate(`/`)}>New Search</button>
-            </div>
+    return <ActiveGame searchedName={name} actualName={null}/>
   }
 
   return (
