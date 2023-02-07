@@ -43,6 +43,14 @@
     transition-duration: 0.5s;
 }
 
+.no-player-data{
+    font-size: 2rem;
+    color: var(--league-white-color);
+
+    display: inline-block;
+    margin-top: 3em;
+}
+
 .active-game-button:hover{
     background-color: var(--league-gold-color);
     color: black;
@@ -88,5 +96,14 @@
 
     .player-rank-piece{
         max-width: 30rem;
+    }
+
+    .no-player-data{
+        font-size: 3rem;
+        
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
     }
 }

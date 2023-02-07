@@ -54,8 +54,9 @@ const SummonerPage = () => {
         <button className="active-game-button" onClick={() => navigate(`./ActiveGame`)}>Active Game</button>
       </div>
 
-      <div className="player-container">
-      <div className="player-section">
+      {Object.keys(data?.champions).length !== 0 && data?.matchHistory.games.length !== 0 ?
+      <div className="player-container"> 
+        <div className="player-section">
           <ChampionChart data={data}/>
         </div>
         <div className="player-section">
@@ -65,6 +66,9 @@ const SummonerPage = () => {
           <BadgeBox badges={data?.badges}/>
         </div>
       </div>
+      :
+      <span className="no-player-data">Not Enough Player Data</span>
+      }
     </div>
   )
 }

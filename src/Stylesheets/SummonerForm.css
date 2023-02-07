@@ -119,8 +119,8 @@ form .input-box select:focus{
 
 .loadingGif{
     position: absolute;
-    top: 85%;
-    transform: translate(-50%, -85%);
+    top: 95%;
+    transform: translate(-50%, -95%);
     
     width: 5rem;
 }
