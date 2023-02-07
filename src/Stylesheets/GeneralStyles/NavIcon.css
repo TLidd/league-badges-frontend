@@ -1,5 +1,7 @@
 .navigation{
     --nav-color: #134f8f;
+    margin-top: 8em;
+    margin-bottom: 5em;
 }
 
 .navicon-link{ 
@@ -15,8 +17,6 @@
     padding: 0.25em 0.5em;
     border-radius: 15px;
 
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
     border: 1px solid var(--nav-color);
 }
 
@@ -27,6 +27,11 @@
 }
 
 @media screen and (min-width: 65em) {
+    .navigation{
+        --nav-color: #134f8f;
+        margin: 0px;
+    }
+
     .navicon-link-mobile{
         display: none;
     }
