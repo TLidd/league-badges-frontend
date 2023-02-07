@@ -16,7 +16,8 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
   let nameMatch = name.toUpperCase() === summonerName.toUpperCase();
   let highlight = nameMatch ? "highlight" : "";
 
-  if(sumChamp == 'FiddleSticks') sumChamp = 'Fiddlesticks';
+  if(sumChamp === 'FiddleSticks') sumChamp = 'Fiddlesticks';
+  if(sumChamp === 'Ksante') sumChamp = 'KSante';
 
   return (
     <div className={`card ${team}-team`}>
@@ -49,6 +50,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
               }
           </div>
           :
+          //if there are no badges still fill grid container
           <div className="card-badge-container"><div className="card-badge"></div></div>
       }
     </div>

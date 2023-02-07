@@ -109,9 +109,11 @@ const ChampionChart = ({data}) => {
             <div className='champion-legend'>
             {
                 Object.values(data.champions).slice(0,champsToShow).map((champ, index) => {
+                    if(champ.champData.champName === 'Ksante') champ.champData.champName = 'KSante';
+                    if(champ.champData.champName === 'FiddleSticks') champ.champData.champName = 'Fiddlesticks';
                     return <img key={champ.champData.champName} 
                     style={{border: shownChampions.includes(champ.champData.champName) ? '4px solid ' + graphColors[index].slice(0,7) : '4px solid #FFFFFF00'}} 
-                    src={champ.champData.champName === 'FiddleSticks' ? 'http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/Fiddlesticks.png' : `http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champ.champData.champName}.png`}
+                    src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champ.champData.champName}.png`}
                     name={champ.champData.champName} alt={champ.champData.champName}
                     onClick={championClicked}/>
                 })
