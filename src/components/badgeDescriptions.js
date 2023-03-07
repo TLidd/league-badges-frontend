@@ -7,9 +7,9 @@ export let badgeDescriptions = {
     wardsKilled: "Wards destroyed:",
     goldEarned: "Gold earned:",
     firstBloods: "First Bloods in game:",
-    totalHealsOnTeammates: "Team Healed",
-    totalDamageShieldedOnTeammates: "Team Shielded",
-    totalTimeCCDealt: "Crowd controlling enemy players"
+    totalHealsOnTeammates: "Team Healed:",
+    totalDamageShieldedOnTeammates: "Team Shielded:",
+    totalTimeCCDealt: "Crowd controlling enemy players:"
 }
 
 export let playerRoles = {
