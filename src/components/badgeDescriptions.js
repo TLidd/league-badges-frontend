@@ -9,7 +9,9 @@ export let badgeDescriptions = {
     firstBloods: "First Bloods in game:",
     totalHealsOnTeammates: "Team Healed:",
     totalDamageShieldedOnTeammates: "Team Shielded:",
-    totalTimeCCDealt: "Crowd controlling enemy players:"
+    totalTimeCCDealt: "Crowd controlling enemy players:",
+    dragonKills: "Dragon Control:",
+    baronKills: "Baron Control",
 }
 
 export let playerRoles = {
@@ -31,5 +33,7 @@ export let badgeNames = {
     firstBloods: "First Bloods",
     totalHealsOnTeammates: "Team Healed",
     totalDamageShieldedOnTeammates: "Team Shielded",
-    totalTimeCCDealt: "Crowd Control"
+    totalTimeCCDealt: "Crowd Control",
+    dragonKills: "Dragon Control",
+    baronKills: "Baron Control",
 }
