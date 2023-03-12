@@ -4,6 +4,7 @@ import SummonerPage from './components/SummonerPage/SummonerPage';
 import SummonerLobby from './components/SummonerLobby';
 import HelpPage from './components/HelpPage';
 import ServerState from './components/ServerState';
+import SummonerGameView from './components/SummonerPage/SummonerGameView';
 
 import {Route, BrowserRouter as Router, Routes} from "react-router-dom"
 import { useState } from 'react';
@@ -35,6 +36,7 @@ function App() {
             <Route exact path="" element={<SummonerForm />} />
             <Route exact path={`/Help`} element={<HelpPage />} />
             <Route exact path={`/account/:region/:name`} element={<SummonerPage />} />
+            <Route exact path={`/account/:region/:name/gameView/:gameId`} element={<SummonerGameView />} />
             <Route exact path={`/account/:region/:name/ActiveGame/*`} element={<SummonerLobby />} />
             <Route exact path={'//riot.txt'} onEnter={reload} />
             <Route element={<SummonerForm />}/>
