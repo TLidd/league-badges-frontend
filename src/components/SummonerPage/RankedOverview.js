@@ -1,7 +1,7 @@
 import "../../Stylesheets/SummonerPage/RankedOverview.css"
 import RankedGame from "./RankedGame"
 
-const RankedOverview = ({wins, losses, matchHistory}) => {
+const RankedOverview = ({wins, losses, matchHistory, playerName}) => {
   return (
   <div className="overview-container">
     <span className="ranked-overview-text">Ranked Overview</span>
@@ -14,8 +14,10 @@ const RankedOverview = ({wins, losses, matchHistory}) => {
     <div className="recent-games">
       {matchHistory &&
         matchHistory.map((match, index) => {
-          return <RankedGame win={match.win} kills={match.kills} deaths={match.deaths} spell1={match.spell1} spell2={match.spell2}
-          assists={match.assists} champion={match.champion} playerItems={match.items} gameStats={match.gameStats} key={index} gameKey={index}/>
+          return <RankedGame win={match[playerName].win} kills={match[playerName].kills} 
+          deaths={match[playerName].deaths} spell1={match[playerName].spell1} spell2={match[playerName].spell2}
+          assists={match[playerName].assists} champion={match[playerName].champion} 
+          playerItems={match[playerName].items} gameStats={match[playerName].gameStats} key={index} gameKey={index}/>
         })
       }
     </div>
