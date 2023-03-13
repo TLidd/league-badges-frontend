@@ -2,7 +2,7 @@ import "../../Stylesheets/SummonerPage/RankedGame.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, playerItems, gameStats, gameKey}) => {
+const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, playerItems, gameStats, gameKey, matchData}) => {
   const navigate = useNavigate();
 
   let [moreGameInfo, setMoreGameInfo] = useState(false);
@@ -15,7 +15,7 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
   const showGame = () => {
     navigate(`./gameView/${gameKey}`, {
       state: {
-        "test": 0
+        matchData,
       }
     });
   }
@@ -54,14 +54,16 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
       <div className={`more-info-box ${win ? "won-game" : "lost-game"}`} 
       style={moreGameInfo ? {maxHeight: "500px", padding: "1em 0", borderColor: win ? "green" : "red"} : 
       {border: "0px solid", transition: "border 0s 1s linear, max-height 1s ease-in-out, padding 1s ease-in-out"}}>
-        <button onClick={showGame}>More Game Info</button>
-        {
-          Object.keys(gameStats).map(key => 
-          <div className="more-info-stat" key={`${key} + ${gameStats[key]}`}>
-            {`${key}\u00A0: `}
-            <span className="stat">{`\u00A0${gameStats[key]}`}</span>
-          </div>)
-        }
+        <button className="game-info-button" onClick={showGame}>More Info</button>
+        <div className="stats-wrapper">
+          {
+            Object.keys(gameStats).map(key => 
+            <div className="more-info-stat" key={`${key} + ${gameStats[key]}`}>
+              <span className="stat-description">{`${key}\u00A0: `}</span>
+              <span className="stat">{`\u00A0${gameStats[key]}`}</span>
+            </div>)
+          }
+        </div>
       </div>
     </div>
     

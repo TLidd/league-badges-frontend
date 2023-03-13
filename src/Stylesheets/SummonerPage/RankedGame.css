@@ -113,16 +113,8 @@
 }
 
 .more-info-box{
-    display: flex;
-    flex-direction: column;
-
     margin: auto;
     max-width: 90%;
-
-    gap: 0.5em;
-    
-    align-items: center;
-    justify-content: center;
 
     font-size: 1.6rem;
 
@@ -139,6 +131,70 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 
+}
+
+.more-info-stat{
+    --stat-box-color: rgba(192, 192, 192, 0.775);
+    border: 1px solid var(--stat-box-color);
+    border-radius: 30px;
+
+    background-color: rgba(0, 0, 0, 0.148);
+
+    width: 40%;
+    font-size: 1.4rem;
+
+    padding: 0.5em 0.25em;
+
+    position: relative;
+}
+
+.more-info-stat::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 98%;
+    border-bottom: 1px solid var(--stat-box-color);
+}
+
+.more-info-stat .stat-description{
+    padding: 0.2em 0;
+    display: block;
+}
+
+.more-info-stat .stat{
+    padding: 0.2em 0;
+    display: block;
+}
+
+.stats-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1em;
+    
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.more-info-box .game-info-button{
+    margin-bottom: 1.5em;
+    padding: 0.25em 0.5em;
+    font-size: 1.4rem;
+
+    border-radius: 25px;
+    border-width: 1px;
+
+    background-color: rgba(192, 192, 192, 0.464);
+
+    transition-duration: 0.25s;
+}
+
+.more-info-box .game-info-button:hover{
+    background-color: rgba(192, 192, 192, 0.714);
 }
 
 @media screen and (min-width: 75em){
@@ -163,5 +219,17 @@
 
     .ranked-game-button{
         font-size: 1.7rem;
+    }
+
+    .stats-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: 2em;
+    }
+
+    .more-info-stat{
+        width: 40%;
+        font-size: 1.6rem;
     }
 }
