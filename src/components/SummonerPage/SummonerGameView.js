@@ -63,18 +63,19 @@ function SummonerGameView() {
         {
           Object.keys(state.matchData).map((player, index) => {
             if(index === firstPlayerIndex || index === secondPlayerIndex){
-              console.log(state.matchData[player].gameStats);
               return <div className="compare-player" key={`compare${player}`}>
                       <img src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${state.matchData[player].champion}.png`} />
                       <div className={`${name.toLowerCase() === player.toLowerCase() ? "searched-player" : "compare-player-name"}`}>{player}</div>
+                      <div className="compare-stats-container">
                       {
                         Object.keys(state.matchData[player].gameStats).map(statName => {
-                          return <div className="compare-stats-wrapper">
-                                  <div>{statName}</div>
-                                  <div>{state.matchData[player].gameStats[statName]}</div>
+                          return <div className="compare-stats">
+                                  <div className="stat-name">{statName}</div>
+                                  <div className="stat-number">{state.matchData[player].gameStats[statName]}</div>
                                 </div>
                         })
                       }
+                      </div>
                     </div>
             }
           })

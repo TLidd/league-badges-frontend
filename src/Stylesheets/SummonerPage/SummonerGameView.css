@@ -30,6 +30,8 @@ a{
 .searched-player{
     font-size: 2.5rem;
     color: var(--league-gold-color);
+
+    text-decoration: underline;
 }
 
 .compare-box{
@@ -41,17 +43,45 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    gap: 3em;
 }
 
 .compare-box .compare-player .compare-player-name{
     font-size: 2rem;
     color: var(--league-white-color);
+
+    text-decoration: underline;
 }
 
 .compare-box .compare-player img{
     width: 15%;
     border-radius: 50%;
     border: 1px solid var(--league-white-color);
+}
+
+.compare-box .compare-player .compare-stats-container{
+    padding: 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 4em;
+}
+
+.compare-box .compare-player .compare-stats-container .compare-stats{
+    font-size: 1.6rem;
+
+    color: rgb(46, 123, 146);
+}
+
+.compare-box .compare-player .compare-stats-container .compare-stats .stat-name{
+    text-decoration: underline;
+}
+
+.compare-box .compare-player .compare-stats-container .compare-stats .stat-number{
+    color: var(--league-white-color);
 }
 
 .player-game-wrapper{
