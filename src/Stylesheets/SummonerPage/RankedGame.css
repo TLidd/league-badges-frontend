@@ -175,9 +175,10 @@
 
     gap: 1em;
     
-    
     align-items: center;
     justify-content: center;
+
+    color: var(--league-white-color);
 }
 
 .more-info-box .game-info-button{

@@ -60,7 +60,7 @@ const SummonerPage = () => {
           <ChampionChart data={data}/>
         </div>
         <div className="player-section">
-          <RankedOverview wins={data?.matchHistory.wins} losses={data?.matchHistory.losses} matchHistory={data?.matchHistory.games} playerName={name}/>
+          <RankedOverview wins={data?.matchHistory.wins} losses={data?.matchHistory.losses} matchHistory={data?.matchHistory.games} playerName={data?.SummonerName}/>
         </div>
         <div className="player-section">
           <BadgeBox badges={data?.badges}/>

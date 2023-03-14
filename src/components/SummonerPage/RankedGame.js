@@ -2,7 +2,7 @@ import "../../Stylesheets/SummonerPage/RankedGame.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, playerItems, gameStats, gameKey, matchData}) => {
+const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, playerItems, gameStats, gameKey, matchData, moreInfoButton}) => {
   const navigate = useNavigate();
 
   let [moreGameInfo, setMoreGameInfo] = useState(false);
@@ -23,7 +23,7 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
   if(champion === 'FiddleSticks') champion = 'Fiddlesticks';
 
   return (
-    <div className='game-container' >
+    <div className='game-container'>
       <div className={`ranked-game ${win ? "won-game" : "lost-game"}`}>
         <div className="champ-sums-container">
           <div className="champ-img-wrapper">
@@ -47,9 +47,11 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
           })
         }
         </div>
-        <button onClick={showMoreInfo} className="ranked-game-button" style={moreGameInfo ? {transform: "rotate(-3.142rad)"} : {}}>
+        {
+        moreInfoButton && <button onClick={showMoreInfo} className="ranked-game-button" style={moreGameInfo ? {transform: "rotate(-3.142rad)"} : {}}>
           ˅
         </button>
+        }
       </div>
       <div className={`more-info-box ${win ? "won-game" : "lost-game"}`} 
       style={moreGameInfo ? {maxHeight: "500px", padding: "1em 0", borderColor: win ? "green" : "red"} : 
@@ -81,6 +83,7 @@ RankedGame.defaultProps = {
   spell1: "Flash",
   spell2: "Smite",
   gameKey: 0,
+  moreInfoButton: true,
 }
 
 export default RankedGame

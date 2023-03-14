@@ -17,7 +17,7 @@ const RankedOverview = ({wins, losses, matchHistory, playerName}) => {
           return <RankedGame win={match[playerName].win} kills={match[playerName].kills} 
           deaths={match[playerName].deaths} spell1={match[playerName].spell1} spell2={match[playerName].spell2}
           assists={match[playerName].assists} champion={match[playerName].champion} 
-          playerItems={match[playerName].items} gameStats={match[playerName].gameStats} key={index} gameKey={index} matchData={match}/>
+          playerItems={match[playerName].items} gameStats={match[playerName].gameStats} key={index} gameKey={index} matchData={match} moreInfoButton={true}/>
         })
       }
     </div>
