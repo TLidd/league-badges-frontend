@@ -49,7 +49,7 @@ function SummonerGameView() {
             Object.keys(state.matchData).map((player, index) => {
               if(index < 5){
                 return <div className="game-view-player" key={`${player}${index}`} id={index} onClick={selectPlayer}>
-                <Link className={name.toLowerCase() === player.toLowerCase() ? "searched-player" : ""} to={`../account/${region}/${player}`}>{player}</Link>
+                <span className={name.toLowerCase() === player.toLowerCase() ? "searched-player" : ""} to={`../account/${region}/${player}`}>{player}</span>
                 <div className={`player-game-wrapper ${firstPlayerIndex === index ? "selected-player" : ""}`}>
                     <RankedGame win={state.matchData[player].win} kills={state.matchData[player].kills} 
                     deaths={state.matchData[player].deaths} spell1={state.matchData[player].spell1} spell2={state.matchData[player].spell2}
@@ -68,7 +68,7 @@ function SummonerGameView() {
               if(index === firstPlayerIndex || index === secondPlayerIndex){
                 return <div className="compare-player" key={`compare${player}`}>
                         <img src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${state.matchData[player].champion}.png`} />
-                        <div className={`${name.toLowerCase() === player.toLowerCase() ? "searched-player" : "compare-player-name"}`}>{player}</div>
+                        <Link to={`/account/${region}/${player}`} className={`${name.toLowerCase() === player.toLowerCase() ? "searched-player" : "compare-player-name"}`}>{player}</Link>
                         <div className="compare-stats-container">
                         {
                           Object.keys(state.matchData[player].gameStats).map(statName => {
@@ -90,7 +90,7 @@ function SummonerGameView() {
             Object.keys(state.matchData).map((player, index) => {
               if(index >= 5){
                 return <div className="game-view-player" key={`${player}${index}`} id={index} onClick={selectPlayer}>
-                  <Link className={name.toLowerCase() === player.toLowerCase() ? "searched-player" : ""} to={`../account/${region}/${player}`}>{player}</Link>
+                  <span className={name.toLowerCase() === player.toLowerCase() ? "searched-player" : ""} to={`../account/${region}/${player}`}>{player}</span>
                   <div className={`player-game-wrapper ${secondPlayerIndex === index ? "selected-player" : ""}`}>
                     <RankedGame win={state.matchData[player].win} kills={state.matchData[player].kills} 
                     deaths={state.matchData[player].deaths} spell1={state.matchData[player].spell1} spell2={state.matchData[player].spell2}
