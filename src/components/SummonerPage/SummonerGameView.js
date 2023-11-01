@@ -20,7 +20,7 @@ function SummonerGameView() {
   }
 
   if(state && !secondPlayerIndex && !firstPlayerIndex){
-    Object.keys(state.matchData).map((playerName, index) => {
+    Object.keys(state.matchData).forEach((playerName, index) => {
       if(name.toLowerCase() === playerName.toLowerCase()){
         if(index < 5){
           setFirstPlayerIndex(index);
@@ -57,7 +57,8 @@ function SummonerGameView() {
                     playerItems={state.matchData[player].items} gameStats={state.matchData[player].gameStats} moreInfoButton={false}/>
                 </div>
               </div>
-              } 
+              }
+              return null;
             })
           }
         </div>
@@ -67,7 +68,7 @@ function SummonerGameView() {
             Object.keys(state.matchData).map((player, index) => {
               if(index === firstPlayerIndex || index === secondPlayerIndex){
                 return <div className="compare-player" key={`compare${player}`}>
-                        <img src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${state.matchData[player].champion}.png`} />
+                        <img src={`http://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/${state.matchData[player].champion}.png`} alt=""/>
                         <Link to={`/account/${region}/${player}`} className={`${name.toLowerCase() === player.toLowerCase() ? "searched-player" : "compare-player-name"}`}>{player}</Link>
                         <div className="compare-stats-container">
                         {
@@ -81,6 +82,7 @@ function SummonerGameView() {
                         </div>
                       </div>
               }
+              return null;
             })
           }
         </div>
@@ -98,7 +100,8 @@ function SummonerGameView() {
                     playerItems={state.matchData[player].items} gameStats={state.matchData[player].gameStats} moreInfoButton={false}/>
                   </div>
                 </div>
-              }  
+              }
+              return null;  
             })
           }
         </div>

@@ -29,7 +29,7 @@ const SummonerCard = ({sumName, sumChamp, sumRole, sumBadges, activeGame, sumTie
           :
           summonerName
         }
-        <img className="namePlate-img" src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${sumChamp}.png`} alt=""></img>
+        <img className="namePlate-img" src={`http://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/${sumChamp}.png`} alt=""></img>
         <div className="card-rank">
           <RankImage tier={sumTier} rank={sumRank}/>
         </div>

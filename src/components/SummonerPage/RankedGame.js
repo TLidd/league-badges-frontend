@@ -27,7 +27,7 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
       <div className={`ranked-game ${win ? "won-game" : "lost-game"}`}>
         <div className="champ-sums-container">
           <div className="champ-img-wrapper">
-            <img src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/${champion}.png`} alt=""/>
+            <img src={`http://ddragon.leagueoflegends.com/cdn/13.21.1/img/champion/${champion}.png`} alt=""/>
           </div>
           <div className="spells-wrapper">
             <div className="spell"><img src= {`http://ddragon.leagueoflegends.com/cdn/8.11.1/img/spell/Summoner${spell1}.png`} alt=""/></div>
@@ -41,7 +41,7 @@ const RankedGame = ({win, kills, deaths, assists, champion, spell1, spell2, play
               if(index === 6) return null;
               return  <div className="player-item" key={index}>
                         {itemId !== 0 && 
-                          <img className="item-img" src={`http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${itemId}.png`} alt=""/>
+                          <img className="item-img" src={`http://ddragon.leagueoflegends.com/cdn/13.21.1/img/item/${itemId}.png`} alt=""/>
                         }
                       </div>
           })

@@ -13,6 +13,22 @@ html{
   font-size: 62.5%;
 }
 
+body{
+  background-image: linear-gradient(to bottom right, #071b30, #0c2e54, #071b30);
+  background-size: 200%;
+
+  animation: bg-animation 10s infinite alternate;
+}
+
+@keyframes bg-animation{
+  0% {
+      background-position: left;
+  }
+  100% {
+      background-position: right;
+  }
+}
+
 .App {
   overflow-y: auto;
   overflow-x: hidden;
